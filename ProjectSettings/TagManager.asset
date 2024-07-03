@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
+  - Shield
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1406101885
+    locked: 0
+  - name: Map
+    uniqueID: 1201679399
     locked: 0
