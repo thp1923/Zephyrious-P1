@@ -12,11 +12,8 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            Invoke("PlayGame", 1f);
-        }
     }
+
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
