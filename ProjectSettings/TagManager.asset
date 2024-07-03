@@ -42,3 +42,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3178011453
+    locked: 0
+  - name: Tuong
+    uniqueID: 524494473
+    locked: 0
+  - name: door
+    uniqueID: 2091466421
+    locked: 0
+  - name: Do_vat
+    uniqueID: 615590185
+    locked: 0
+  - name: test
+    uniqueID: 4141828855
+    locked: 0
+  - name: Ground
+    uniqueID: 2345407897
+    locked: 0
+  - name: Trang tri
+    uniqueID: 2479776937
+    locked: 0
