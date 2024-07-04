@@ -842,7 +842,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294046193
+    rgba: 15856113
   m_fontColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1179,9 +1179,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\u1EA3nh b\xE1o\nGame n\xE0y c\xF3 h\xECnh \u1EA3nh m\xE1u me, ng\xF4n
-    t\u1EEB \u0111\u1EA3 k\xEDch v\xE0 hi\u1EC7u \u1EE9ng c\xF3 th\u1EC3 l\xE0m cho\xE1ng,
-    bu\u1ED3n n\xF4n. C\xE2n nh\u1EAFc tr\u01B0\u1EDBc khi ch\u01A1i."
+  m_text: "C\u1EA3nh b\xE1o\nGame ch\u1EC9 d\xE0nh cho l\u1EE9a tu\u1ED5i 16 ho\u1EB7c
+    tr\u1EDF l\xEAn. Vui l\xF2ng c\xE2n nh\u1EAFc tr\u01B0\u1EDBc khi v\xE0o game"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1501,7 +1500,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294046193
+    rgba: 15856113
   m_fontColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2018,7 +2017,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294046193
+    rgba: 15856113
   m_fontColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
