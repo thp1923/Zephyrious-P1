@@ -483,6 +483,56 @@ MonoBehaviour:
   Shield: {fileID: 1763380185}
   timeShield: 5
   timeShieldCoolDown: 10
+--- !u!1 &610998874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610998876}
+  - component: {fileID: 610998875}
+  m_Layer: 0
+  m_Name: GameSession
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &610998875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610998874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4694c2a8753224c9e9e9cbe44e28d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerlives: 1000
+  score: 0
+  scoreText: {fileID: 0}
+  liveSlider: {fileID: 0}
+  gameOver: {fileID: 0}
+  UI: {fileID: 0}
+--- !u!4 &610998876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610998874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.390056, y: 1.2644699, z: -0.040402398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645798628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,3 +1660,4 @@ SceneRoots:
   - {fileID: 1173048673}
   - {fileID: 2015233144326612120}
   - {fileID: 2006528192}
+  - {fileID: 610998876}

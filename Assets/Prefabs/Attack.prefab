@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3491012298828504333}
   - component: {fileID: -3038604976995236785}
   - component: {fileID: -4325288170057616501}
+  - component: {fileID: 402897124048534497}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -107,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: -2131306363
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fcc9b542f85bf954595d4b96dd3f3922, type: 3}
+  m_Sprite: {fileID: -1666526980, guid: ec38dad91513d984e8827411b13a6100, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,3 +165,24 @@ MonoBehaviour:
     m_Bits: 64
   attackDamgeSkill: 35
   liveTime: 0.15
+--- !u!95 &402897124048534497
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161997846262657792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2bde16b3a4737b4087e9f289e5a6ae1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
