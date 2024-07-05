@@ -195,3 +195,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   banditAim: {fileID: 1220294553957340447}
   maxHeath: 100
+  DamgeEnemy: 100
