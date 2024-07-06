@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4073409750832061200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5193242062913792410}
   - component: {fileID: 2680555196683827422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8510283261629734021}
   - component: {fileID: 4889632443992678075}
   - component: {fileID: 620543121272580492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield
   m_TagString: Shield
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 450921100471007465}
   - component: {fileID: 5767042197942182329}
   - component: {fileID: 7220010637871290163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player2 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6019425836177487645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}

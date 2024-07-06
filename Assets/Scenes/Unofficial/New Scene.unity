@@ -1428,6 +1428,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 526739694}
+    - target: {fileID: 7859314542963541436, guid: ecc93fe8d2ac03d40ab6511aeef6c81a, type: 3}
+      propertyPath: attackRange
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859314542963541436, guid: ecc93fe8d2ac03d40ab6511aeef6c81a, type: 3}
+      propertyPath: attackMask.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
