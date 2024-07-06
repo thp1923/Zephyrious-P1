@@ -196,3 +196,5 @@ MonoBehaviour:
   banditAim: {fileID: 1220294553957340447}
   maxHeath: 100
   DamgeEnemy: 100
+  player: {fileID: 0}
+  distance: 10
