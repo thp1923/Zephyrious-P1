@@ -9,13 +9,10 @@ public class PlayerKnight : MonoBehaviour
     Rigidbody2D rig;
     [SerializeField] float speed = 10f;
     [SerializeField] float jumpspeed = 30f;
-    [SerializeField] float dashForce = 30f;
     CapsuleCollider2D col;
     Animator aim;
     public BoxCollider2D feet;
-    private bool isDash = false;
-    public float DashTime = 1f;
-    float nextDashTime;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -48,11 +45,7 @@ public class PlayerKnight : MonoBehaviour
     {
         Run();
         Flip();
-        if(Input.GetKey(KeyCode.K))
-        {
-            Dash();
-            
-        }
+        
     }
     void Run()
     {
@@ -88,27 +81,5 @@ public class PlayerKnight : MonoBehaviour
 
         }
         //RotatePlayer();
-    }
-
-    void Dash()
-    {
-        aim.SetTrigger("Dash");
-        if (transform.localScale.x < 0)
-        {
-            rig.velocity = new Vector2(1 * -dashForce, rig.velocity.y);
-        }
-        else if (transform.localScale.x > 0)
-        {
-            rig.velocity = new Vector2(1 * dashForce, rig.velocity.y);
-        }
-        isDash = true;
-        StartCoroutine(StopDash());
-    }
-
-    IEnumerator StopDash()
-    {
-        yield return new WaitForSeconds(DashTime);
-        rig.velocity = new Vector2(0, rig.velocity.y);
-        isDash = false;
     }
 }
