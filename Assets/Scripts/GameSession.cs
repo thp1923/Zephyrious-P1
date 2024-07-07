@@ -14,7 +14,7 @@ public class GameSession : MonoBehaviour
     public GameObject UI;
     private void Start()
     {
-        scoreText.text = score.ToString();
+        //scoreText.text = score.ToString();
 
         liveSlider.value = playerlives;
     }
@@ -42,7 +42,7 @@ public class GameSession : MonoBehaviour
 
         playerlives -= damgeEnemy;//giam mang
         liveSlider.value = playerlives;
-        if (playerlives > 0)//con mang
+        if (playerlives <= 0)
         {
             PlayerDeath();
         }
@@ -88,8 +88,8 @@ public class GameSession : MonoBehaviour
 
     public void GameOver()
     {
-        UI.SetActive(false);
-        gameOver.SetActive(true);
+        //UI.SetActive(false);
+        //gameOver.SetActive(true);
 
     }
 

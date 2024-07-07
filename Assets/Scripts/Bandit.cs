@@ -40,23 +40,23 @@ public class Bandit : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Attack();
-        }
-    }
+    
     
     // Update is called once per frame
     void Update()
     {
         Run();
-        
+        Debug.DrawRay(rb.transform.position, Vector2.right * distance, Color.green);
+        Debug.DrawRay(rb.transform.position, Vector2.left * distance, Color.green);
     }
     void Run()
     {
-        if(Vector2.Distance(player.position, rb.position) < distance)
+        if (FindObjectOfType<PlayerTakeDamge>().isAlive == false)
+        {
+            banditAim.SetBool("IsRunning", false);
+            return;
+        }
+        if (Vector2.Distance(player.position, rb.position) < distance)
         {
             banditAim.SetBool("IsRunning", true);
         }

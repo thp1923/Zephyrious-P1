@@ -199,8 +199,8 @@ MonoBehaviour:
   DamgeEnemy: 100
   player: {fileID: 0}
   attackPoint: {fileID: 4308850579978233461}
-  distance: 10
-  attackRange: 0.88
+  distance: 8
+  attackRange: 0.94
   attackMask:
     serializedVersion: 2
     m_Bits: 384
