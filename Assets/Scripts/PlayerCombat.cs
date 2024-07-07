@@ -8,11 +8,17 @@ public class PlayerCombat : MonoBehaviour
     private float nextTime;
 
     public Animator aim;
-
+    AudioManager audioManager;
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
         {
             Attack();
             nextTime = Time.time + RateTime;
+            audioManager.PlaySFX(audioManager.SwordSwing);
         }
     }
     void Attack()

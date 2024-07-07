@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -12,8 +13,13 @@ public class PlayerKnight : MonoBehaviour
     CapsuleCollider2D col;
     Animator aim;
     public BoxCollider2D feet;
-    
-    
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +38,14 @@ public class PlayerKnight : MonoBehaviour
     {
         if (!feet.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            return;
+            return;   
         }
-
+        audioManager.PlaySFX(audioManager.Fall);
         if (value.isPressed)
         {
             rig.velocity += new Vector2(0f, jumpspeed);
         }
+        audioManager.PlaySFX(audioManager.Jump);
     }
     // Update is called once per frame
     void Update()
@@ -59,6 +66,7 @@ public class PlayerKnight : MonoBehaviour
         {
             //Jump - false
             aim.SetBool("Jump", false);
+            
         }
         else
         {
