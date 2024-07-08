@@ -16,15 +16,15 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.J)&& Time.time >= nextTime)
+        if(Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
-            Attack();
+            aim.SetTrigger("Attack1");
             nextTime = Time.time + RateTime;
         }
     }
     void Attack()
     {
-        aim.SetTrigger("Attack1");
+        
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
@@ -32,10 +32,13 @@ public class PlayerCombat : MonoBehaviour
         {
             enemy.GetComponent<Bandit>().TakeDamge(attackDamge);
         }
+        
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
     }
+
+    
 }

@@ -163,7 +163,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
-  attackDamgeSkill: 35
+  attackDamgeSkill: 40
   liveTime: 0.15
 --- !u!95 &402897124048534497
 Animator:
