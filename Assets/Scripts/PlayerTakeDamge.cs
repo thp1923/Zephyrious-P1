@@ -49,12 +49,12 @@ public class PlayerTakeDamge : MonoBehaviour
             if (transform.localScale.x < 0)
             {
 
-                rb.AddForce(transform.right * knockBack, ForceMode2D.Force);
+                rb.velocity = new Vector2(rb.velocity.x * knockBack, rb.velocity.y);
             }
             else if (transform.localScale.x > 0)
             {
 
-                rb.AddForce(transform.right * -knockBack, ForceMode2D.Force);
+                rb.velocity = new Vector2(rb.velocity.x * -knockBack, rb.velocity.y);
             }
             FindObjectOfType<GameSession>().TakeLife(damgeEnemy);
             
