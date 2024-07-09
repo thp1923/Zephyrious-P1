@@ -28,11 +28,12 @@ public class PlayerTakeDamge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.I) && Time.time > nextTime)
+        nextTime -= Time.deltaTime;
+        if (Input.GetKey(KeyCode.I) && nextTime <= 0)
         {
             OnShield();
             haveShield = true;
-            nextTime = Time.time + timeShieldCoolDown;
+            nextTime = timeShieldCoolDown;
         }
     }
     
