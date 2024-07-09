@@ -1302,6 +1302,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1984834195523391647, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2011319040032053482, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
       propertyPath: m_Name
       value: PlayerKnight
