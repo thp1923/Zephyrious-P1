@@ -46,7 +46,7 @@ public class PlayerKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L)))
+        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K))
         {
             isAttack = true;
             speed = 0;

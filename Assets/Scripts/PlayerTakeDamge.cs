@@ -28,6 +28,10 @@ public class PlayerTakeDamge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isAlive == false)
+        {
+            return;
+        }
         nextTime -= Time.deltaTime;
         if (Input.GetKey(KeyCode.I) && nextTime <= 0)
         {
