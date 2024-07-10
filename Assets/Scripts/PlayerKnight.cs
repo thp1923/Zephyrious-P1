@@ -9,10 +9,12 @@ public class PlayerKnight : MonoBehaviour
     Rigidbody2D rig;
     [SerializeField] float speed = 10f;
     [SerializeField] float jumpspeed = 30f;
+    float currentSpeed;
+    float currentJumpSpeed;
     CapsuleCollider2D col;
     Animator aim;
     public BoxCollider2D feet;
-    
+    public bool isAttack = false;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,8 @@ public class PlayerKnight : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
         aim = GetComponent<Animator>();
-        
+        currentJumpSpeed = jumpspeed;
+        currentSpeed = speed;
     }
     void OnMove(InputValue value)
     {
@@ -43,6 +46,18 @@ public class PlayerKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ((Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L)))
+        {
+            isAttack = true;
+            speed = 0;
+            jumpspeed = 0;
+        }
+        else
+        {
+            isAttack = false;
+            speed = currentSpeed;
+            jumpspeed = currentJumpSpeed;
+        }
         Run();
         Flip();
         

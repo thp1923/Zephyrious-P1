@@ -13,24 +13,19 @@ public class Shield : MonoBehaviour
     void Start()
     {
         shield = GetComponent<Animator>();
-        col = GetComponent<CapsuleCollider2D>();
+        
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            return;
-        }
-        else
-        {
-            shield.SetTrigger("TakeDamge");
-        }
+        
     }
     // Update is called once per frame
     void Update()
     {
         
     }
+
+    
 }

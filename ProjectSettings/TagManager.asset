@@ -56,3 +56,6 @@ TagManager:
   - name: Map
     uniqueID: 1201679399
     locked: 0
+  - name: GameSession
+    uniqueID: 4283200231
+    locked: 0

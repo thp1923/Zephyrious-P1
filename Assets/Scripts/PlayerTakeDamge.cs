@@ -28,11 +28,12 @@ public class PlayerTakeDamge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.I) && Time.time > nextTime)
+        nextTime -= Time.deltaTime;
+        if (Input.GetKey(KeyCode.I) && nextTime <= 0)
         {
             OnShield();
             haveShield = true;
-            nextTime = Time.time + timeShieldCoolDown;
+            nextTime = timeShieldCoolDown;
         }
     }
     
@@ -49,12 +50,12 @@ public class PlayerTakeDamge : MonoBehaviour
             if (transform.localScale.x < 0)
             {
 
-                rb.AddForce(transform.right * knockBack, ForceMode2D.Force);
+                rb.velocity = new Vector2(rb.velocity.x * knockBack, rb.velocity.y);
             }
             else if (transform.localScale.x > 0)
             {
 
-                rb.AddForce(transform.right * -knockBack, ForceMode2D.Force);
+                rb.velocity = new Vector2(rb.velocity.x * -knockBack, rb.velocity.y);
             }
             FindObjectOfType<GameSession>().TakeLife(damgeEnemy);
             
