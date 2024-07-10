@@ -9,7 +9,7 @@ public class Bandit : MonoBehaviour
     public int maxHeath = 100;
     int currentHeath;
     public int DamgeEnemy = 10;
-    public Transform player;
+    Transform player;
     public Transform attackPoint;
     bool isFlip = false;
     Rigidbody2D rb;
@@ -23,6 +23,7 @@ public class Bandit : MonoBehaviour
     {
         currentHeath = maxHeath;
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     
     public void TakeDamge(int damge)
