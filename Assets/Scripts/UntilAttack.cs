@@ -46,4 +46,12 @@ public class UntilAttack : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            GameObject impact = Instantiate(Impact, impactPoint.position, impactPoint.rotation);
+            Destroy(gameObject);
+        }
+    }
 }

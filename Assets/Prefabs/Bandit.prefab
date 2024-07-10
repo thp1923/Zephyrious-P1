@@ -195,9 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   banditAim: {fileID: 1220294553957340447}
-  maxHeath: 100
+  maxHeath: 1000
   DamgeEnemy: 100
-  player: {fileID: 0}
   attackPoint: {fileID: 4308850579978233461}
   distance: 8
   attackRange: 0.42

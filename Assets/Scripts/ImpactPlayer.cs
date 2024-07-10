@@ -20,7 +20,10 @@ public class ImpactPlayer : MonoBehaviour
     {
         
     }
-
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
+    }
     public void Impact()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);

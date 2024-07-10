@@ -391,10 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766475f6ed52d814e8ecead8ab1cd67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 6159258925476749600, guid: 2a5ba60e66da4804e80206a99564dbd7, type: 3}
+  attack: {fileID: 1964087966111136499, guid: 2a5ba60e66da4804e80206a99564dbd7, type: 3}
   FirePoint: {fileID: 4656259561619000846}
-  speed: 60
-  TimeRate: 30
+  speed: 50
+  TimeRate: 1
   aim: {fileID: 4038291161526676091}
 --- !u!95 &4038291161526676091 stripped
 Animator:
