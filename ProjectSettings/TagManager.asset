@@ -4,19 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - Enemy
+  - sss
   - Shield
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Player
   - Water
   - UI
   - Enemy
-  - Player
-  - Shield
+  - Ground
+  - 
   - 
   - 
   - 
@@ -44,18 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: AttackPlayer
-    uniqueID: 2163660933
-    locked: 0
-  - name: Player
-    uniqueID: 3195741407
-    locked: 0
-  - name: Enemy
-    uniqueID: 1406101885
-    locked: 0
-  - name: Map
-    uniqueID: 1201679399
-    locked: 0
-  - name: GameSession
-    uniqueID: 4283200231
+  - name: Ground
+    uniqueID: 1208603827
     locked: 0
