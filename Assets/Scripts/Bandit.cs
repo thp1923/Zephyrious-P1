@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bandit : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class Bandit : MonoBehaviour
     public float distance = 10f;
     public bool isBoss = false;
     bool isDodge = false;
-    
+    float stargravityscale;
+    public Slider liveSlider;
+
     public float attackRange = 2f;
     public LayerMask attackMask;
     // Start is called before the first frame update
@@ -26,6 +29,9 @@ public class Bandit : MonoBehaviour
         currentHeath = maxHeath;
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        stargravityscale = rb.gravityScale;
+        liveSlider.maxValue = maxHeath;
+        liveSlider.value = maxHeath;
     }
     
     public void TakeDamge(int damge)
@@ -35,6 +41,7 @@ public class Bandit : MonoBehaviour
             return;
         }
         currentHeath -= damge;
+        liveSlider.value = currentHeath;
         banditAim.SetTrigger("Hurt");
         if (currentHeath <= 0)
         {
@@ -45,33 +52,34 @@ public class Bandit : MonoBehaviour
     {
         banditAim.SetBool("Death", true);
         GetComponent<Collider2D>().enabled = false;
+        rb.gravityScale = 0;
         this.enabled = false;
     }
     
-    void Dodge()
-    {
-        float ramdomDodge = Random.Range(-10f, 3f);
-        if(isBoss == false)
-        {
-            return;
-        }
-        if (FindObjectOfType<PlayerKnight>().isAttack == true && ramdomDodge > 2 && 
-            Vector2.Distance(player.position, here.position) < distance)
-        {
-            banditAim.SetTrigger("Dodge");
-            isDodge = true;
-        }
-        else
-        {
-            isDodge = false;
-        }
-    }
+    //void Dodge()
+    //{
+    //    float ramdomDodge = Random.Range(-10f, 3f);
+    //    if(isBoss == false)
+    //    {
+    //        return;
+    //    }
+    //    if (FindObjectOfType<PlayerKnight>().isAttack == true && ramdomDodge > 2 && 
+    //        Vector2.Distance(player.position, here.position) < distance)
+    //    {
+    //        banditAim.SetTrigger("Dodge");
+    //        isDodge = true;
+    //    }
+    //    else
+    //    {
+    //        isDodge = false;
+    //    }
+    //}
     
     // Update is called once per frame
     void Update()
     {
         Run();
-        Dodge();
+        //Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
     }

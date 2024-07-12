@@ -219,6 +219,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: RateTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
       value: 0.56
       objectReference: {fileID: 0}
@@ -313,6 +317,10 @@ PrefabInstance:
     - target: {fileID: 5593100137122117524, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Offset.y
       value: -0.13424815
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: TimeRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
