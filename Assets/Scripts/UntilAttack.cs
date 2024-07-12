@@ -42,6 +42,7 @@ public class UntilAttack : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill);
+            
             GameObject impact = Instantiate(Impact, impactPoint.position, impactPoint.rotation);
             Destroy(gameObject);
         }

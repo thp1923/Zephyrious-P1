@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bandit : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
-    
     public Animator banditAim;
     public int maxHeath = 100;
     int currentHeath;
@@ -13,10 +12,9 @@ public class Bandit : MonoBehaviour
     public Transform attackPoint;
     bool isFlip = false;
     Rigidbody2D rb;
-    public Transform here;
     public float distance = 10f;
 
-    
+
     public float attackRange = 2f;
     public LayerMask attackMask;
     // Start is called before the first frame update
@@ -26,7 +24,7 @@ public class Bandit : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    
+
     public void TakeDamge(int damge)
     {
         currentHeath -= damge;
@@ -42,14 +40,14 @@ public class Bandit : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
-    
-    
+
+
     // Update is called once per frame
     void Update()
     {
         Run();
-        Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
-        Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
+        Debug.DrawRay(rb.transform.position, Vector2.right * distance, Color.green);
+        Debug.DrawRay(rb.transform.position, Vector2.left * distance, Color.green);
     }
     void Run()
     {
@@ -58,7 +56,7 @@ public class Bandit : MonoBehaviour
             banditAim.SetBool("IsRunning", false);
             return;
         }
-        if (Vector2.Distance(player.position, here.position) < distance)
+        if (Vector2.Distance(player.position, rb.position) < distance)
         {
             banditAim.SetBool("IsRunning", true);
         }
@@ -78,14 +76,14 @@ public class Bandit : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        
+
     }
     public void Flip()
     {
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
 
-        if(transform.position.x > player.position.x && isFlip)
+        if (transform.position.x > player.position.x && isFlip)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
