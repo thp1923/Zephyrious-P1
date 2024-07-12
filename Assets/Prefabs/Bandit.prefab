@@ -232,6 +232,7 @@ MonoBehaviour:
   attackPoint: {fileID: 4308850579978233461}
   here: {fileID: 4292311649737163164}
   distance: 8
+  isBoss: 0
   attackRange: 0.42
   attackMask:
     serializedVersion: 2

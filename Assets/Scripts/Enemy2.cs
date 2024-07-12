@@ -12,6 +12,7 @@ public class Enemy2 : MonoBehaviour
     public Transform attackPoint;
     bool isFlip = false;
     Rigidbody2D rb;
+    public Transform here;
     public float distance = 10f;
 
 
@@ -46,8 +47,8 @@ public class Enemy2 : MonoBehaviour
     void Update()
     {
         Run();
-        Debug.DrawRay(rb.transform.position, Vector2.right * distance, Color.green);
-        Debug.DrawRay(rb.transform.position, Vector2.left * distance, Color.green);
+        Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
+        Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
     }
     void Run()
     {
@@ -56,7 +57,7 @@ public class Enemy2 : MonoBehaviour
             banditAim.SetBool("IsRunning", false);
             return;
         }
-        if (Vector2.Distance(player.position, rb.position) < distance)
+        if (Vector2.Distance(player.position, here.position) < distance)
         {
             banditAim.SetBool("IsRunning", true);
         }

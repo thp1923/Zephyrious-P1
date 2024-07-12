@@ -15,7 +15,8 @@ public class Bandit : MonoBehaviour
     Rigidbody2D rb;
     public Transform here;
     public float distance = 10f;
-
+    public bool isBoss = false;
+    bool isDodge = false;
     
     public float attackRange = 2f;
     public LayerMask attackMask;
@@ -29,6 +30,10 @@ public class Bandit : MonoBehaviour
     
     public void TakeDamge(int damge)
     {
+        if(isDodge == true)
+        {
+            return;
+        }
         currentHeath -= damge;
         banditAim.SetTrigger("Hurt");
         if (currentHeath <= 0)
@@ -43,11 +48,30 @@ public class Bandit : MonoBehaviour
         this.enabled = false;
     }
     
+    void Dodge()
+    {
+        float ramdomDodge = Random.Range(-10f, 3f);
+        if(isBoss == false)
+        {
+            return;
+        }
+        if (FindObjectOfType<PlayerKnight>().isAttack == true && ramdomDodge > 2 && 
+            Vector2.Distance(player.position, here.position) < distance)
+        {
+            banditAim.SetTrigger("Dodge");
+            isDodge = true;
+        }
+        else
+        {
+            isDodge = false;
+        }
+    }
     
     // Update is called once per frame
     void Update()
     {
         Run();
+        Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
     }
