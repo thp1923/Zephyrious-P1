@@ -26,10 +26,13 @@ public class OptionSettings : MonoBehaviour
         ResolutionSettings.value = currentResolutionIndex;
         ResolutionSettings.RefreshShownValue();
     }
-    
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
