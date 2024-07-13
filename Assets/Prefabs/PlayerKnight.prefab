@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: RateTime
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
@@ -372,6 +372,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: knockBack
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: knockBackUp
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

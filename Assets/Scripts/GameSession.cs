@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    public int playerlives = 1000;
+    public int playerlivesMax = 1000;
+    public int playerlives;
     public int score = 0;
     public TMPro.TextMeshProUGUI scoreText;
 
@@ -14,9 +15,11 @@ public class GameSession : MonoBehaviour
     public GameObject UI;
     private void Start()
     {
-        //scoreText.text = score.ToString();
-
+        scoreText.text = score.ToString();
+        playerlives = playerlivesMax;
+        liveSlider.maxValue = playerlivesMax;
         liveSlider.value = playerlives;
+        gameOver.SetActive(false);
     }
 
     private void Awake()
@@ -88,8 +91,8 @@ public class GameSession : MonoBehaviour
 
     public void GameOver()
     {
-        //UI.SetActive(false);
-        //gameOver.SetActive(true);
+        UI.SetActive(false);
+        gameOver.SetActive(true);
 
     }
 

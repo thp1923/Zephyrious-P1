@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 545779821611749273}
   m_Layer: 6
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: AttackEnemy
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,10 +528,12 @@ MonoBehaviour:
   maxHeath: 500
   DamgeEnemy: 200
   attackPoint: {fileID: 545779821611749273}
+  isFlip: 0
   here: {fileID: 747977964175482220}
   distance: 10
   isBoss: 1
   liveSlider: {fileID: 8080328952467255812}
+  pointAdd: 500
   attackRange: 1.08
   attackMask:
     serializedVersion: 2

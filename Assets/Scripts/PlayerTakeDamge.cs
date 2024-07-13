@@ -11,7 +11,7 @@ public class PlayerTakeDamge : MonoBehaviour
     public float knockBackUp = 2f;
     public BoxCollider2D death;
     public Animator aim;
-    Transform enemyTrans;
+    
 
     public bool isAlive = true;
     float nextTime;
@@ -24,7 +24,7 @@ public class PlayerTakeDamge : MonoBehaviour
         aim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         death.gameObject.SetActive(false);
-        enemyTrans = GameObject.FindGameObjectWithTag("Enemy").transform;
+        
     }
 
     // Update is called once per frame
@@ -52,6 +52,7 @@ public class PlayerTakeDamge : MonoBehaviour
         }
         else if (haveShield == false)
         {
+            FlipTakeDamge();
             rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
@@ -84,6 +85,17 @@ public class PlayerTakeDamge : MonoBehaviour
         GetComponent<CapsuleCollider2D>().enabled = false;
         
         
+    }
+    void FlipTakeDamge()
+    {
+        if(FindObjectOfType<Bandit>().isFlip == false)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        else if (FindObjectOfType<Bandit>().isFlip == true)
+        {
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+        }
     }
     void OnShield()
     {

@@ -12,7 +12,7 @@ public class Bandit : MonoBehaviour
     public int DamgeEnemy = 10;
     Transform player;
     public Transform attackPoint;
-    bool isFlip = false;
+    public bool isFlip = false;
     Rigidbody2D rb;
     public Transform here;
     public float distance = 10f;
@@ -20,6 +20,7 @@ public class Bandit : MonoBehaviour
     bool isDodge = false;
     float stargravityscale;
     public Slider liveSlider;
+    public int pointAdd = 10;
 
     public float attackRange = 2f;
     public LayerMask attackMask;
@@ -50,6 +51,7 @@ public class Bandit : MonoBehaviour
     }
     void Die()
     {
+        FindObjectOfType<GameSession>().AddScore(pointAdd);
         banditAim.SetBool("Death", true);
         GetComponent<Collider2D>().enabled = false;
         rb.gravityScale = 0;

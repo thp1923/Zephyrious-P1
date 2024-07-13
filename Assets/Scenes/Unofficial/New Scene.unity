@@ -1139,6 +1139,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371927165888258166, guid: ecc93fe8d2ac03d40ab6511aeef6c81a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 371927165888258166, guid: ecc93fe8d2ac03d40ab6511aeef6c81a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 701183151067215191, guid: ecc93fe8d2ac03d40ab6511aeef6c81a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -1196,14 +1204,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1156446459187424806, guid: 4c4ce06104f52b44695a6f521f4155cc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.552957
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156446459187424806, guid: 4c4ce06104f52b44695a6f521f4155cc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -96
-      objectReference: {fileID: 0}
+    - target: {fileID: 960149329859655848, guid: 4c4ce06104f52b44695a6f521f4155cc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 645798630}
     - target: {fileID: 1535513042244567065, guid: 4c4ce06104f52b44695a6f521f4155cc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1382,6 +1386,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 6770524736080779796, guid: 414041202fbf47f4fb91c71accaa45d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770524736080779796, guid: 414041202fbf47f4fb91c71accaa45d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1395,10 +1407,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1537678947464413690, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
-      propertyPath: RateTime
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2011319040032053482, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
       propertyPath: m_Name
       value: PlayerKnight
@@ -1446,14 +1454,6 @@ PrefabInstance:
     - target: {fileID: 5227849996726509270, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8585463896614628896, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
-      propertyPath: knockBack
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8585463896614628896, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
-      propertyPath: knockBackUp
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
