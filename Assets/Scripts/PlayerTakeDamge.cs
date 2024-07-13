@@ -8,8 +8,10 @@ public class PlayerTakeDamge : MonoBehaviour
     public float timeShield = 5f;
     public float timeShieldCoolDown = 10f;
     public float knockBack = 2f;
+    public float knockBackUp = 2f;
     public BoxCollider2D death;
     public Animator aim;
+    Transform enemyTrans;
 
     public bool isAlive = true;
     float nextTime;
@@ -22,7 +24,7 @@ public class PlayerTakeDamge : MonoBehaviour
         aim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         death.gameObject.SetActive(false);
-        
+        enemyTrans = GameObject.FindGameObjectWithTag("Enemy").transform;
     }
 
     // Update is called once per frame
@@ -50,16 +52,17 @@ public class PlayerTakeDamge : MonoBehaviour
         }
         else if (haveShield == false)
         {
+            rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
             {
 
-                rb.velocity = new Vector2(rb.velocity.x * knockBack, rb.velocity.y);
+                rb.AddForce(transform.right * knockBack, ForceMode2D.Impulse);
             }
             else if (transform.localScale.x > 0)
             {
 
-                rb.velocity = new Vector2(rb.velocity.x * -knockBack, rb.velocity.y);
+                rb.AddForce(transform.right * -knockBack, ForceMode2D.Impulse);
             }
             FindObjectOfType<GameSession>().TakeLife(damgeEnemy);
             
@@ -72,6 +75,8 @@ public class PlayerTakeDamge : MonoBehaviour
     void Die()
     {
         isAlive = false;
+        rb.drag = 10f;
+        rb.angularDrag = 10f;
         aim.SetBool("IsDeath", true);
         GetComponent<PlayerCombat>().enabled = false;
         GetComponent<PlayerKnight>().enabled = false;
