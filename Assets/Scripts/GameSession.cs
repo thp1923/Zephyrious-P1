@@ -9,16 +9,24 @@ public class GameSession : MonoBehaviour
     public int playerlives;
     public int score = 0;
     public TMPro.TextMeshProUGUI scoreText;
+    
 
     public Slider liveSlider;
+    public Slider staminaSlider;
+    public Slider DefSlider;
     public GameObject gameOver;
     public GameObject UI;
     private void Start()
     {
+        
         scoreText.text = score.ToString();
         playerlives = playerlivesMax;
         liveSlider.maxValue = playerlivesMax;
         liveSlider.value = playerlives;
+        staminaSlider.maxValue = FindObjectOfType<PlayerKnight>().staminaMax;
+        staminaSlider.value = FindObjectOfType<PlayerKnight>().stamina;
+        DefSlider.maxValue = FindObjectOfType<PlayerTakeDamge>().DefMax;
+        DefSlider.value = FindObjectOfType<PlayerTakeDamge>().Def;
         gameOver.SetActive(false);
     }
 
@@ -31,7 +39,15 @@ public class GameSession : MonoBehaviour
             Destroy(gameObject);
         else
             DontDestroyOnLoad(gameObject); //khong cho huy khi load
+        
     }
+
+    private void Update()
+    {
+        staminaSlider.value = FindObjectOfType<PlayerKnight>().stamina;
+        DefSlider.value = FindObjectOfType<PlayerTakeDamge>().Def;
+    }
+
 
     //khi player chet
     public void PlayerDeath()

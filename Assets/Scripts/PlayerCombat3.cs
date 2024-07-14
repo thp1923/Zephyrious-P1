@@ -9,6 +9,7 @@ public class PlayerCombat3 : MonoBehaviour
     public float speed = 10f;
     public float TimeRate = 1f;
     public Animator aim;
+    public int staminaCost = 70;
     float nextTime;
 
 
@@ -23,10 +24,12 @@ public class PlayerCombat3 : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.K) && Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
+        if (Input.GetKey(KeyCode.K) && Time.time >= nextTime && 
+            FindObjectOfType<PlayerKnight>().isAttack == true &&
+            FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
         {
             aim.SetTrigger("Attack3");
-
+            GetComponent<PlayerKnight>().CostSatamina(staminaCost);
             nextTime = Time.time + TimeRate;
         }
     }

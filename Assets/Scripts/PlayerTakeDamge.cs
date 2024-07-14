@@ -11,6 +11,11 @@ public class PlayerTakeDamge : MonoBehaviour
     public float knockBackUp = 2f;
     public BoxCollider2D death;
     public Animator aim;
+    public int DefMax = 500;
+    public int Def;
+    public int DefRegen = 50;
+    public float DefRegenTime = 3f;
+    float nextDefRegenTime;
     
 
     public bool isAlive = true;
@@ -24,7 +29,7 @@ public class PlayerTakeDamge : MonoBehaviour
         aim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         death.gameObject.SetActive(false);
-        
+        Def = DefMax;
     }
 
     // Update is called once per frame
@@ -41,6 +46,23 @@ public class PlayerTakeDamge : MonoBehaviour
             haveShield = true;
             nextTime = timeShieldCoolDown;
         }
+        if(Def >= DefMax)
+        {
+            Def = DefMax;
+            nextDefRegenTime = Time.time + DefRegenTime;
+        }
+        else if (Def < DefMax && haveShield == false && Time.time >= nextDefRegenTime)
+        {
+            Def += DefRegen;
+            nextDefRegenTime = Time.time + DefRegenTime;
+        }
+        if (Def <= 0)
+        {
+            Def = 0;
+            nextDefRegenTime = Time.time + DefRegenTime;
+            haveShield = false;
+            Shield.SetActive(false);
+        }
     }
     
 
@@ -48,7 +70,8 @@ public class PlayerTakeDamge : MonoBehaviour
     {
         if(haveShield == true)
         {
-            return;
+            Def -= damgeEnemy;
+            
         }
         else if (haveShield == false)
         {

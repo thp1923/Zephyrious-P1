@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: knockBack
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: knockBackUp
@@ -408,6 +408,7 @@ MonoBehaviour:
   speed: 50
   TimeRate: 1
   aim: {fileID: 4038291161526676091}
+  staminaCost: 70
 --- !u!95 &4038291161526676091 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3106908610175587176, guid: 4425da174196f994abe552e2eea92d45, type: 3}

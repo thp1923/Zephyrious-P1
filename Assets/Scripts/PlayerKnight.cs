@@ -15,7 +15,12 @@ public class PlayerKnight : MonoBehaviour
     Animator aim;
     public BoxCollider2D feet;
     public bool isAttack = false;
-    
+    public int staminaMax = 100;
+    public int recugeraceStamina = 30;
+    public float recugeraceStaminaTime = 10f;
+    public int stamina;
+    float nextrecugeraceStaminaTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,11 @@ public class PlayerKnight : MonoBehaviour
         aim = GetComponent<Animator>();
         currentJumpSpeed = jumpspeed;
         currentSpeed = speed;
+        stamina = staminaMax;
+    }
+    public void CostSatamina(int cost)
+    {
+        stamina -= cost;
     }
     void OnMove(InputValue value)
     {
@@ -60,7 +70,16 @@ public class PlayerKnight : MonoBehaviour
         }
         Run();
         Flip();
-        
+        if(stamina >= staminaMax)
+        {
+            stamina = staminaMax;
+            nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
+        }
+        else if (stamina < staminaMax && isAttack == false && Time.time >= nextrecugeraceStaminaTime)
+        {
+            stamina += recugeraceStamina;
+            nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
+        }
     }
     void Run()
     {
@@ -97,4 +116,5 @@ public class PlayerKnight : MonoBehaviour
         }
         //RotatePlayer();
     }
+    
 }
