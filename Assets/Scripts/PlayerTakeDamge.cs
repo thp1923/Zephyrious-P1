@@ -8,8 +8,15 @@ public class PlayerTakeDamge : MonoBehaviour
     public float timeShield = 5f;
     public float timeShieldCoolDown = 10f;
     public float knockBack = 2f;
+    public float knockBackUp = 2f;
     public BoxCollider2D death;
     public Animator aim;
+    public int DefMax = 500;
+    public int Def;
+    public int DefRegen = 50;
+    public float DefRegenTime = 3f;
+    float nextDefRegenTime;
+    
 
     public bool isAlive = true;
     float nextTime;
@@ -22,18 +29,39 @@ public class PlayerTakeDamge : MonoBehaviour
         aim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         death.gameObject.SetActive(false);
-        
+        Def = DefMax;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isAlive == false)
+        {
+            return;
+        }
         nextTime -= Time.deltaTime;
         if (Input.GetKey(KeyCode.I) && nextTime <= 0)
         {
             OnShield();
             haveShield = true;
             nextTime = timeShieldCoolDown;
+        }
+        if(Def >= DefMax)
+        {
+            Def = DefMax;
+            nextDefRegenTime = Time.time + DefRegenTime;
+        }
+        else if (Def < DefMax && haveShield == false && Time.time >= nextDefRegenTime)
+        {
+            Def += DefRegen;
+            nextDefRegenTime = Time.time + DefRegenTime;
+        }
+        if (Def <= 0)
+        {
+            Def = 0;
+            nextDefRegenTime = Time.time + DefRegenTime;
+            haveShield = false;
+            Shield.SetActive(false);
         }
     }
     
@@ -42,20 +70,23 @@ public class PlayerTakeDamge : MonoBehaviour
     {
         if(haveShield == true)
         {
-            return;
+            Def -= damgeEnemy;
+            
         }
         else if (haveShield == false)
         {
+            FlipTakeDamge();
+            rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
             {
 
-                rb.velocity = new Vector2(rb.velocity.x * knockBack, rb.velocity.y);
+                rb.AddForce(transform.right * knockBack, ForceMode2D.Impulse);
             }
             else if (transform.localScale.x > 0)
             {
 
-                rb.velocity = new Vector2(rb.velocity.x * -knockBack, rb.velocity.y);
+                rb.AddForce(transform.right * -knockBack, ForceMode2D.Impulse);
             }
             FindObjectOfType<GameSession>().TakeLife(damgeEnemy);
             
@@ -68,6 +99,8 @@ public class PlayerTakeDamge : MonoBehaviour
     void Die()
     {
         isAlive = false;
+        rb.drag = 10f;
+        rb.angularDrag = 10f;
         aim.SetBool("IsDeath", true);
         GetComponent<PlayerCombat>().enabled = false;
         GetComponent<PlayerKnight>().enabled = false;
@@ -75,6 +108,17 @@ public class PlayerTakeDamge : MonoBehaviour
         GetComponent<CapsuleCollider2D>().enabled = false;
         
         
+    }
+    void FlipTakeDamge()
+    {
+        if(FindObjectOfType<Bandit>().isFlip == false)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        else if (FindObjectOfType<Bandit>().isFlip == true)
+        {
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+        }
     }
     void OnShield()
     {

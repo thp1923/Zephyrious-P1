@@ -40,6 +40,18 @@ public class AttackPlayer : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill);
+            
+            Destroy(gameObject);
+        }
+        
+    }
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            
             Destroy(gameObject);
         }
     }

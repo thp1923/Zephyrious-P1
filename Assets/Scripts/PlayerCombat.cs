@@ -16,7 +16,8 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
+        
+        if (Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
             aim.SetTrigger("Attack1");
             nextTime = Time.time + RateTime;
@@ -31,9 +32,13 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Bandit>().TakeDamge(attackDamge);
+            
+
         }
-        
+
     }
+
+    
 
     void OnDrawGizmosSelected()
     {
