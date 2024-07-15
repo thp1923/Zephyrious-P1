@@ -34,6 +34,9 @@ public class ImpactPlayer : MonoBehaviour
         }
 
     }
+    public void UpDamge(int up)
+    {
+        attackDamgeSkill += up;
+    }
 
-    
 }

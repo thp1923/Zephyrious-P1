@@ -133,4 +133,9 @@ public class PlayerTakeDamge : MonoBehaviour
         haveShield = false;
         Shield.SetActive(false);
     }
+
+    public void UpDef(int up)
+    {
+        DefMax += up;
+    }
 }

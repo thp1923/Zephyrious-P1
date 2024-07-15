@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,18 +9,37 @@ public class GameSession : MonoBehaviour
     public int playerlivesMax = 1000;
     public int playerlives;
     public int score = 0;
+    public int scoreCost = 100;
     public TMPro.TextMeshProUGUI scoreText;
-    
+    public TMPro.TextMeshProUGUI scoreText2;
+    public TMPro.TextMeshProUGUI Errors;
+
+    public int powerPoint = 1;
+    public int DefPoint = 1;
+    public int HpPoint = 1;
+    public int StaminaPoint = 1;
+
+    public int UpPower = 10;
+    public int UpDef = 10;
+    public int UpHp = 10;
+    public int UpMana = 10;
+
+    public TMPro.TextMeshProUGUI PowerText;
+    public TMPro.TextMeshProUGUI DefText;
+    public TMPro.TextMeshProUGUI HpText;
+    public TMPro.TextMeshProUGUI ManaText;
 
     public Slider liveSlider;
     public Slider staminaSlider;
     public Slider DefSlider;
     public GameObject gameOver;
     public GameObject UI;
+    public GameObject stats;
     private void Start()
     {
         
         scoreText.text = score.ToString();
+        scoreText2.text = score.ToString();
         playerlives = playerlivesMax;
         liveSlider.maxValue = playerlivesMax;
         liveSlider.value = playerlives;
@@ -29,7 +49,11 @@ public class GameSession : MonoBehaviour
         DefSlider.value = FindObjectOfType<PlayerTakeDamge>().Def;
         gameOver.SetActive(false);
     }
-
+    IEnumerator DelText()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        Errors.text = null;
+    }
     private void Awake()
     {
         //so luong doi tuong GameSession
@@ -44,8 +68,16 @@ public class GameSession : MonoBehaviour
 
     private void Update()
     {
+        staminaSlider.maxValue = FindObjectOfType<PlayerKnight>().staminaMax;
+        DefSlider.maxValue = FindObjectOfType<PlayerTakeDamge>().DefMax;
+        liveSlider.maxValue = playerlivesMax;
+
+        liveSlider.value = playerlives;
         staminaSlider.value = FindObjectOfType<PlayerKnight>().stamina;
         DefSlider.value = FindObjectOfType<PlayerTakeDamge>().Def;
+
+        scoreText2.text = score.ToString();
+        scoreText.text = score.ToString();
     }
 
 
@@ -67,7 +99,78 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    
+    public void PowerUp()
+    {
+        if(score < scoreCost)
+        {
+            TextError();
+            return;
+        }
+        powerPoint += 1;
+        score -= scoreCost;
+        PowerText.text = powerPoint.ToString();
+        Damge();
+    }
+    public void DefUp()
+    {
+        if (score < scoreCost)
+        {
+            TextError();
+            return;
+        }
+        DefPoint += 1;
+        score -= scoreCost;
+        DefText.text = DefPoint.ToString();
+        Def();
+    }
+    public void HpUp()
+    {
+        if (score < scoreCost)
+        {
+            TextError();
+            return;
+        }
+        HpPoint += 1;
+        score -= scoreCost;
+        HpText.text = HpPoint.ToString();
+        Hp();
+    }
+    public void ManaUp()
+    {
+        if (score < scoreCost)
+        {
+            TextError();
+            return;
+        }
+        StaminaPoint += 1;
+        score -= scoreCost;
+        ManaText.text = StaminaPoint.ToString();
+        Stamina();
+    }
+    public void Damge()
+    {
+        FindObjectOfType<PlayerCombat>().UpDamge(UpPower);
+        FindObjectOfType<AttackPlayer>().UpDamge(UpPower);
+        FindObjectOfType<UntilAttack>().UpDamge(UpPower);
+        FindObjectOfType<ImpactPlayer>().UpDamge(UpPower);
+    }
+    public void Def()
+    {
+        FindObjectOfType<PlayerTakeDamge>().UpDef(UpDef);
+    }
+    public void Hp()
+    {
+        playerlivesMax += UpHp;
+    }
+    public void Stamina()
+    {
+        FindObjectOfType<PlayerKnight>().UpStamina(UpMana);
+    }
+    public void TextError()
+    {
+        Errors.text = "Not Enough Score";
+        StartCoroutine(DelText());
+    }
 
     //het mang, reset toan bo, choi lai tu dau
     public void ResetGameSession()
@@ -98,6 +201,7 @@ public class GameSession : MonoBehaviour
     {
         score += num;
         scoreText.text = score.ToString();
+        scoreText2.text = score.ToString();
     }
 
     public void PauseGame()
@@ -122,4 +226,5 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene("Win");
         Destroy(gameObject);
     }
+    
 }

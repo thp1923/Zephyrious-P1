@@ -45,8 +45,11 @@ public class AttackPlayer : MonoBehaviour
         }
         
     }
+    public void UpDamge(int up)
+    {
+        attackDamgeSkill += up;
+    }
 
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))

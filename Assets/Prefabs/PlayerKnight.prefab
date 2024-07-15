@@ -236,11 +236,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: RateTime
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: attackDamge
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 557044288221833601, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Size.x

@@ -102,7 +102,10 @@ public class PlayerKnight : MonoBehaviour
 
 
     }
-
+    public void UpStamina(int up)
+    {
+        staminaMax += up;
+    }
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;

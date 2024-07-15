@@ -38,7 +38,10 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-    
+    public void UpDamge(int up)
+    {
+        attackDamge += up;
+    }
 
     void OnDrawGizmosSelected()
     {

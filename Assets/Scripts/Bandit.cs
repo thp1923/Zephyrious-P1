@@ -17,7 +17,7 @@ public class Bandit : MonoBehaviour
     public Transform here;
     public float distance = 10f;
     public bool isBoss = false;
-    bool isDodge = false;
+    public bool isDestroy = false;
     float stargravityscale;
     public Slider liveSlider;
     public int pointAdd = 10;
@@ -37,16 +37,13 @@ public class Bandit : MonoBehaviour
     
     public void TakeDamge(int damge)
     {
-        if(isDodge == true)
-        {
-            return;
-        }
         currentHeath -= damge;
         liveSlider.value = currentHeath;
         banditAim.SetTrigger("Hurt");
         if (currentHeath <= 0)
         {
             Die();
+            Destroy();
         }
     }
     void Die()
@@ -56,8 +53,16 @@ public class Bandit : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         rb.gravityScale = 0;
         this.enabled = false;
+
     }
-    
+    void Destroy()
+    {
+        if(isDestroy == true)
+        {
+            Destroy(gameObject, 1.6f);
+        }
+    }
+
     //void Dodge()
     //{
     //    float ramdomDodge = Random.Range(-10f, 3f);
@@ -76,7 +81,7 @@ public class Bandit : MonoBehaviour
     //        isDodge = false;
     //    }
     //}
-    
+
     // Update is called once per frame
     void Update()
     {
