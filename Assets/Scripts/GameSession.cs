@@ -24,6 +24,13 @@ public class GameSession : MonoBehaviour
     public int UpHp = 10;
     public int UpMana = 10;
 
+    public int currentPowerBuff1 = 0;
+    public int currentPowerBuff2 = 0;
+    public int currentPowerBuff3 = 0;
+    public int currentPowerBuff4 = 0;
+    public int currentDefBuff = 0;
+    public int currentManaBuff = 0;
+
     public TMPro.TextMeshProUGUI PowerText;
     public TMPro.TextMeshProUGUI DefText;
     public TMPro.TextMeshProUGUI HpText;
@@ -37,7 +44,8 @@ public class GameSession : MonoBehaviour
     public GameObject stats;
     private void Start()
     {
-        
+        currentDefBuff = FindObjectOfType<PlayerTakeDamge>().DefMax;
+        currentManaBuff = FindObjectOfType<PlayerKnight>().staminaMax;
         scoreText.text = score.ToString();
         scoreText2.text = score.ToString();
         playerlives = playerlivesMax;
@@ -48,12 +56,14 @@ public class GameSession : MonoBehaviour
         DefSlider.maxValue = FindObjectOfType<PlayerTakeDamge>().DefMax;
         DefSlider.value = FindObjectOfType<PlayerTakeDamge>().Def;
         gameOver.SetActive(false);
+        
     }
     IEnumerator DelText()
     {
         yield return new WaitForSecondsRealtime(3f);
         Errors.text = null;
     }
+    
     private void Awake()
     {
         //so luong doi tuong GameSession
@@ -108,8 +118,9 @@ public class GameSession : MonoBehaviour
         }
         powerPoint += 1;
         score -= scoreCost;
+        
         PowerText.text = powerPoint.ToString();
-        Damge();
+        
     }
     public void DefUp()
     {
@@ -132,6 +143,7 @@ public class GameSession : MonoBehaviour
         }
         HpPoint += 1;
         score -= scoreCost;
+        
         HpText.text = HpPoint.ToString();
         Hp();
     }
@@ -144,19 +156,32 @@ public class GameSession : MonoBehaviour
         }
         StaminaPoint += 1;
         score -= scoreCost;
+        
         ManaText.text = StaminaPoint.ToString();
         Stamina();
     }
     public void Damge()
     {
-        FindObjectOfType<PlayerCombat>().UpDamge(UpPower);
-        FindObjectOfType<AttackPlayer>().UpDamge(UpPower);
-        FindObjectOfType<UntilAttack>().UpDamge(UpPower);
-        FindObjectOfType<ImpactPlayer>().UpDamge(UpPower);
+        currentPowerBuff1 = FindObjectOfType<PlayerCombat>().attackDamge + UpPower;
+        
+    }
+    public void Damge2()
+    {
+        currentPowerBuff2 = FindObjectOfType<AttackPlayer>().attackDamgeSkill1 + UpPower;
+        
+    }
+    public void Damge3()
+    {
+        currentPowerBuff3 = FindObjectOfType<UntilAttack>().attackDamgeSkill2 + UpPower;
+        
+    }
+    public void Damge4()
+    {
+        currentPowerBuff4 = FindObjectOfType<ImpactPlayer>().attackDamgeSkill3 + UpPower;
     }
     public void Def()
     {
-        FindObjectOfType<PlayerTakeDamge>().UpDef(UpDef);
+        currentDefBuff += UpDef;
     }
     public void Hp()
     {
@@ -164,7 +189,7 @@ public class GameSession : MonoBehaviour
     }
     public void Stamina()
     {
-        FindObjectOfType<PlayerKnight>().UpStamina(UpMana);
+        currentManaBuff += UpMana;
     }
     public void TextError()
     {

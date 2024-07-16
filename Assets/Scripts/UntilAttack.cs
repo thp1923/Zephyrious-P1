@@ -9,7 +9,7 @@ public class UntilAttack : MonoBehaviour
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamgeSkill = 40;
+    public int attackDamgeSkill2 = 40;
     public float liveTime = 1f;
     public Transform impactPoint;
     public GameObject Impact;
@@ -37,21 +37,24 @@ public class UntilAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        buff();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill);
+            
+            enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill2);
             
             GameObject impact = Instantiate(Impact, impactPoint.position, impactPoint.rotation);
             Destroy(gameObject);
         }
     }
 
-    public void UpDamge(int up)
+    public void buff()
     {
-        attackDamgeSkill += up;
+        attackDamgeSkill2 = FindObjectOfType<GameSession>().currentPowerBuff3;
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))

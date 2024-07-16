@@ -16,7 +16,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        attackDamge = FindObjectOfType<GameSession>().currentPowerBuff1;
         if (Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
             aim.SetTrigger("Attack1");
@@ -25,8 +25,8 @@ public class PlayerCombat : MonoBehaviour
     }
     void Attack()
     {
-        
 
+        
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies)
@@ -38,10 +38,7 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-    public void UpDamge(int up)
-    {
-        attackDamge += up;
-    }
+    
 
     void OnDrawGizmosSelected()
     {

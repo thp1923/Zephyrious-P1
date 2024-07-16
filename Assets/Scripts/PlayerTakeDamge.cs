@@ -35,7 +35,8 @@ public class PlayerTakeDamge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isAlive == false)
+        DefMax = FindObjectOfType<GameSession>().currentDefBuff;
+        if (isAlive == false)
         {
             return;
         }

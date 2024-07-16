@@ -134,7 +134,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 72
-  attackDamgeSkill: 100
+  attackDamgeSkill: 400
   liveTime: 0.5
   impactPoint: {fileID: 6053410500813236320}
   Impact: {fileID: 8332546452552477272, guid: 8e7cd0beafc2c4c4cb01a3c6a2edaa88, type: 3}

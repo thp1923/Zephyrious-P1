@@ -9,7 +9,7 @@ public class AttackPlayer : MonoBehaviour
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamgeSkill = 40;
+    public int attackDamgeSkill1 = 40;
     public float liveTime = 1f;
     // Start is called before the first frame update
     void Start()
@@ -35,19 +35,22 @@ public class AttackPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        buff();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill);
+            
+            enemy.GetComponent<Bandit>().TakeDamge(attackDamgeSkill1);
             
             Destroy(gameObject);
         }
         
     }
-    public void UpDamge(int up)
+    
+    public void buff()
     {
-        attackDamgeSkill += up;
+        attackDamgeSkill1 = FindObjectOfType<GameSession>().currentPowerBuff2;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
