@@ -111,6 +111,7 @@ public class Bandit : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, attackMask);
         if (colInfo != null)
         {
+            FindObjectOfType<PlayerTakeDamge>().FlipTakeDamge(isFlip);
             colInfo.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy);
         }
     }

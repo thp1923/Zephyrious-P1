@@ -9,7 +9,7 @@ public class AttackPlayer : MonoBehaviour
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamgeSkill1 = 40;
+    public int attackDamgeSkill1;
     public float liveTime = 1f;
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class AttackPlayer : MonoBehaviour
     
     public void buff()
     {
-        attackDamgeSkill1 = FindObjectOfType<GameSession>().currentPowerBuff2;
+        attackDamgeSkill1 = FindObjectOfType<GameSession>().damgeSkill;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

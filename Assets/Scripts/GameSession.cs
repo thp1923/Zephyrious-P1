@@ -24,12 +24,25 @@ public class GameSession : MonoBehaviour
     public int UpHp = 10;
     public int UpMana = 10;
 
-    public int currentPowerBuff1 = 0;
-    public int currentPowerBuff2 = 0;
-    public int currentPowerBuff3 = 0;
-    public int currentPowerBuff4 = 0;
-    public int currentDefBuff = 0;
-    public int currentManaBuff = 0;
+    public int BuffSkill = 2;
+    public int BuffUntil = 3;
+    public int BuffImpack = 2 ;// (damge/BuffImpact)
+    public int currentDefBuff;
+    public int currentManaBuff;
+    public int currentPowerBuff;
+    public int damgeSkill;
+    public int damgeUntil;
+    public int damgeImpact;
+
+    public TMPro.TextMeshProUGUI CD1;
+    public TMPro.TextMeshProUGUI CD2;
+    public TMPro.TextMeshProUGUI CD3;
+    public float Cd1 = 0.1f;
+    public float Cd2 = 0.1f;
+    public float Cd3 = 0.1f;
+    public GameObject cd1;
+    public GameObject cd2;
+    public GameObject cd3;
 
     public TMPro.TextMeshProUGUI PowerText;
     public TMPro.TextMeshProUGUI DefText;
@@ -44,6 +57,10 @@ public class GameSession : MonoBehaviour
     public GameObject stats;
     private void Start()
     {
+        currentPowerBuff = FindObjectOfType<PlayerCombat>().attackDamge;
+        damgeSkill = currentPowerBuff * BuffSkill;
+        damgeUntil = currentPowerBuff * BuffUntil;
+        damgeImpact = currentPowerBuff / BuffImpack;
         currentDefBuff = FindObjectOfType<PlayerTakeDamge>().DefMax;
         currentManaBuff = FindObjectOfType<PlayerKnight>().staminaMax;
         scoreText.text = score.ToString();
@@ -78,6 +95,16 @@ public class GameSession : MonoBehaviour
 
     private void Update()
     {
+        Cd1 = FindObjectOfType<PlayerCombat>().CDAttack - 0.1f;
+        Cd2 = FindObjectOfType<PlayerCombat2>().CDSkill - 0.1f;
+        Cd3 = FindObjectOfType<PlayerCombat3>().CDUntil - 0.1f;
+
+        CD1.text = Cd1.ToString("F1");
+        CD2.text = Cd2.ToString("F1");
+        CD3.text = Cd3.ToString("F1");
+
+        CD();
+
         staminaSlider.maxValue = FindObjectOfType<PlayerKnight>().staminaMax;
         DefSlider.maxValue = FindObjectOfType<PlayerTakeDamge>().DefMax;
         liveSlider.maxValue = playerlivesMax;
@@ -90,6 +117,12 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    public void CD()
+    {
+        if(Cd1 >= 0) { cd1.SetActive(true); } else { cd1.SetActive(false); }
+        if(Cd2 >= 0) { cd2.SetActive(true); } else { cd2.SetActive(false); }
+        if (Cd3 >= 0) {  cd3.SetActive(true); } else { cd3.SetActive(false); }
+    }
 
     //khi player chet
     public void PlayerDeath()
@@ -162,23 +195,13 @@ public class GameSession : MonoBehaviour
     }
     public void Damge()
     {
-        currentPowerBuff1 = FindObjectOfType<PlayerCombat>().attackDamge + UpPower;
-        
+        currentPowerBuff = FindObjectOfType<PlayerCombat>().attackDamge + UpPower;
+        damgeSkill = currentPowerBuff * BuffSkill;
+        damgeUntil = currentPowerBuff * BuffUntil;
+        damgeImpact = currentPowerBuff / BuffImpack;
     }
-    public void Damge2()
-    {
-        currentPowerBuff2 = FindObjectOfType<AttackPlayer>().attackDamgeSkill1 + UpPower;
-        
-    }
-    public void Damge3()
-    {
-        currentPowerBuff3 = FindObjectOfType<UntilAttack>().attackDamgeSkill2 + UpPower;
-        
-    }
-    public void Damge4()
-    {
-        currentPowerBuff4 = FindObjectOfType<ImpactPlayer>().attackDamgeSkill3 + UpPower;
-    }
+    
+    
     public void Def()
     {
         currentDefBuff += UpDef;
@@ -219,7 +242,9 @@ public class GameSession : MonoBehaviour
 
         SceneManager.LoadScene(currentsceneindex);
         Time.timeScale = 1;
-        Destroy(gameObject); //destroy GameSession luon
+        //Destroy(gameObject); //destroy GameSession luon
+        playerlives = playerlivesMax;
+        
     }
 
     public void AddScore(int num)

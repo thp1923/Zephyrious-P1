@@ -7,7 +7,7 @@ public class ImpactPlayer : MonoBehaviour
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamgeSkill3 = 20;
+    public int attackDamgeSkill3;
     public float liveTime = 1f;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class ImpactPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackDamgeSkill3 = FindObjectOfType<GameSession>().currentPowerBuff4;
+        attackDamgeSkill3 = FindObjectOfType<GameSession>().damgeImpact;
     }
     void OnDrawGizmosSelected()
     {

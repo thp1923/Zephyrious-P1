@@ -9,7 +9,7 @@ public class UntilAttack : MonoBehaviour
     public Transform attackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamgeSkill2 = 40;
+    public int attackDamgeSkill2;
     public float liveTime = 1f;
     public Transform impactPoint;
     public GameObject Impact;
@@ -52,7 +52,7 @@ public class UntilAttack : MonoBehaviour
 
     public void buff()
     {
-        attackDamgeSkill2 = FindObjectOfType<GameSession>().currentPowerBuff3;
+        attackDamgeSkill2 = FindObjectOfType<GameSession>().damgeUntil;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)

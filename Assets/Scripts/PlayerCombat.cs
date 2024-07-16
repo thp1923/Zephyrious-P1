@@ -13,14 +13,18 @@ public class PlayerCombat : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
+
+    public float CDAttack;
     // Update is called once per frame
     void Update()
     {
-        attackDamge = FindObjectOfType<GameSession>().currentPowerBuff1;
+        CDAttack -= Time.deltaTime;
+        attackDamge = FindObjectOfType<GameSession>().currentPowerBuff;
         if (Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
             aim.SetTrigger("Attack1");
             nextTime = Time.time + RateTime;
+            CDAttack = RateTime;
         }
     }
     void Attack()
