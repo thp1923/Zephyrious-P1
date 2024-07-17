@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bandit : MonoBehaviour
 {
@@ -9,13 +10,18 @@ public class Bandit : MonoBehaviour
     public int maxHeath = 100;
     int currentHeath;
     public int DamgeEnemy = 10;
-    public Transform player;
+    Transform player;
     public Transform attackPoint;
-    bool isFlip = false;
+    public bool isFlip = false;
     Rigidbody2D rb;
+    public Transform here;
     public float distance = 10f;
+    public bool isBoss = false;
+    bool isDodge = false;
+    float stargravityscale;
+    public Slider liveSlider;
+    public int pointAdd = 10;
 
-    
     public float attackRange = 2f;
     public LayerMask attackMask;
     // Start is called before the first frame update
@@ -23,11 +29,20 @@ public class Bandit : MonoBehaviour
     {
         currentHeath = maxHeath;
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        stargravityscale = rb.gravityScale;
+        liveSlider.maxValue = maxHeath;
+        liveSlider.value = maxHeath;
     }
     
     public void TakeDamge(int damge)
     {
+        if(isDodge == true)
+        {
+            return;
+        }
         currentHeath -= damge;
+        liveSlider.value = currentHeath;
         banditAim.SetTrigger("Hurt");
         if (currentHeath <= 0)
         {
@@ -36,18 +51,39 @@ public class Bandit : MonoBehaviour
     }
     void Die()
     {
+        FindObjectOfType<GameSession>().AddScore(pointAdd);
         banditAim.SetBool("Death", true);
         GetComponent<Collider2D>().enabled = false;
+        rb.gravityScale = 0;
         this.enabled = false;
     }
     
+    //void Dodge()
+    //{
+    //    float ramdomDodge = Random.Range(-10f, 3f);
+    //    if(isBoss == false)
+    //    {
+    //        return;
+    //    }
+    //    if (FindObjectOfType<PlayerKnight>().isAttack == true && ramdomDodge > 2 && 
+    //        Vector2.Distance(player.position, here.position) < distance)
+    //    {
+    //        banditAim.SetTrigger("Dodge");
+    //        isDodge = true;
+    //    }
+    //    else
+    //    {
+    //        isDodge = false;
+    //    }
+    //}
     
     // Update is called once per frame
     void Update()
     {
         Run();
-        Debug.DrawRay(rb.transform.position, Vector2.right * distance, Color.green);
-        Debug.DrawRay(rb.transform.position, Vector2.left * distance, Color.green);
+        //Dodge();
+        Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
+        Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
     }
     void Run()
     {
@@ -56,7 +92,7 @@ public class Bandit : MonoBehaviour
             banditAim.SetBool("IsRunning", false);
             return;
         }
-        if (Vector2.Distance(player.position, rb.position) < distance)
+        if (Vector2.Distance(player.position, here.position) < distance)
         {
             banditAim.SetBool("IsRunning", true);
         }
