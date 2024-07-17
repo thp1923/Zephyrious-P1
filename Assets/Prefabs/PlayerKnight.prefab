@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925720869559851266}
   - component: {fileID: 2089695293615523511}
+  - component: {fileID: 868818333033657991}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -194,6 +195,21 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 6625394032452772594}
+--- !u!114 &868818333033657991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732415567797122071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 0}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!1001 &1375586357916465427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,11 +236,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: RateTime
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 450921100471007465, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: attackDamge
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 557044288221833601, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Size.x
@@ -302,6 +322,22 @@ PrefabInstance:
       propertyPath: jumpspeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5220513196569260106, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: staminaMax
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220513196569260106, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: recugeraceStamina
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220513196569260106, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: recugeraceStaminaTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471837208055274951, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5593100137122117524, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Size.x
       value: 1.2814659
@@ -371,11 +407,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: DefMax
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: DefRegen
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: knockBack
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: knockBackUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220010637871290163, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: DefRegenTime
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

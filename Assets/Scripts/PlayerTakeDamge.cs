@@ -35,7 +35,8 @@ public class PlayerTakeDamge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isAlive == false)
+        
+        if (isAlive == false)
         {
             return;
         }
@@ -63,6 +64,7 @@ public class PlayerTakeDamge : MonoBehaviour
             haveShield = false;
             Shield.SetActive(false);
         }
+        DefMax = FindObjectOfType<GameSession>().currentDefBuff;
     }
     
 
@@ -75,7 +77,7 @@ public class PlayerTakeDamge : MonoBehaviour
         }
         else if (haveShield == false)
         {
-            FlipTakeDamge();
+            
             rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
@@ -109,15 +111,18 @@ public class PlayerTakeDamge : MonoBehaviour
         
         
     }
-    void FlipTakeDamge()
+    public void FlipTakeDamge(bool flip)
     {
-        if(FindObjectOfType<Bandit>().isFlip == false)
-        {
-            transform.localScale = new Vector2(1, transform.localScale.y);
-        }
-        else if (FindObjectOfType<Bandit>().isFlip == true)
+        if(flip == true)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
+            Debug.Log("Trai");
+            
+        }
+        else if (flip == false)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+            Debug.Log("Phai");
         }
     }
     void OnShield()
@@ -132,5 +137,10 @@ public class PlayerTakeDamge : MonoBehaviour
         yield return new WaitForSeconds(timeShield);
         haveShield = false;
         Shield.SetActive(false);
+    }
+
+    public void UpDef(int up)
+    {
+        DefMax += up;
     }
 }

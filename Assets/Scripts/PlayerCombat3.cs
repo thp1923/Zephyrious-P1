@@ -11,7 +11,7 @@ public class PlayerCombat3 : MonoBehaviour
     public Animator aim;
     public int staminaCost = 70;
     float nextTime;
-
+    public float CDUntil;
 
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class PlayerCombat3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CDUntil -= Time.deltaTime;
         if (Input.GetKey(KeyCode.K) && Time.time >= nextTime && 
             FindObjectOfType<PlayerKnight>().isAttack == true &&
             FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
@@ -31,6 +31,7 @@ public class PlayerCombat3 : MonoBehaviour
             aim.SetTrigger("Attack3");
             GetComponent<PlayerKnight>().CostSatamina(staminaCost);
             nextTime = Time.time + TimeRate;
+            CDUntil = TimeRate;
         }
     }
     void Attack3()

@@ -56,6 +56,7 @@ public class PlayerKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        staminaMax = FindObjectOfType<GameSession>().currentManaBuff;
         if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K))
         {
             isAttack = true;
@@ -102,7 +103,7 @@ public class PlayerKnight : MonoBehaviour
 
 
     }
-
+    
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
