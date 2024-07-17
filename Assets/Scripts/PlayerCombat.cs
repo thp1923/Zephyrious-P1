@@ -13,8 +13,12 @@ public class PlayerCombat : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
-
+    AudioManager audioManager;
     public float CDAttack;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
         attackDamge = FindObjectOfType<GameSession>().currentPowerBuff;
         if (Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
+            audioManager.PlaySFX(audioManager.SwordSwing);
             aim.SetTrigger("Attack1");
             nextTime = Time.time + RateTime;
             CDAttack = RateTime;

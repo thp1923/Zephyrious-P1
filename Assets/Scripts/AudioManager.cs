@@ -11,7 +11,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip Jump;
     public AudioClip Fall;
     public AudioClip SwordSwing;
+    public AudioClip SwordSkill;
+    public AudioClip SwordUltimate;
     public AudioClip PlayerDeath;
+    public AudioClip GameOver;
+    public AudioClip UltimateExplosion;
+    public AudioClip PlayerRun;
+    public AudioClip EnemyHit;
     // Start is called before the first frame update
     void Start()
     {

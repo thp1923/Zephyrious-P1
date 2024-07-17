@@ -12,8 +12,12 @@ public class PlayerCombat3 : MonoBehaviour
     public int staminaCost = 70;
     float nextTime;
     public float CDUntil;
+    AudioManager audioManager;
 
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,7 @@ public class PlayerCombat3 : MonoBehaviour
             FindObjectOfType<PlayerKnight>().isAttack == true &&
             FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
         {
+            audioManager.PlaySFX(audioManager.SwordUltimate);
             aim.SetTrigger("Attack3");
             GetComponent<PlayerKnight>().CostSatamina(staminaCost);
             nextTime = Time.time + TimeRate;
