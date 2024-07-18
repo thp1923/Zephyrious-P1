@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip UltimateExplosion;
     public AudioClip PlayerRun;
     public AudioClip EnemyHit;
+    public AudioClip EnemyExplosion;
     // Start is called before the first frame update
     void Start()
     {
