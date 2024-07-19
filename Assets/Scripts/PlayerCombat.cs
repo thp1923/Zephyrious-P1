@@ -13,29 +13,46 @@ public class PlayerCombat : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
+    AudioManager audioManager;
+    public float CDAttack;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.J)&& Time.time >= nextTime)
+        CDAttack -= Time.deltaTime;
+        attackDamge = FindObjectOfType<GameSession>().currentPowerBuff;
+        if (Input.GetKey(KeyCode.J)&& Time.time >= nextTime && FindObjectOfType<PlayerKnight>().isAttack == true)
         {
-            Attack();
+            audioManager.PlaySFX(audioManager.SwordSwing);
+            aim.SetTrigger("Attack1");
             nextTime = Time.time + RateTime;
+            CDAttack = RateTime;
         }
     }
     void Attack()
     {
-        aim.SetTrigger("Attack1");
 
+        
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Bandit>().TakeDamge(attackDamge);
+            
+
         }
+
     }
+
+    
 
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
     }
+
+    
 }

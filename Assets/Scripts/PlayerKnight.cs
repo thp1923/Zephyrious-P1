@@ -9,26 +9,39 @@ public class PlayerKnight : MonoBehaviour
     Rigidbody2D rig;
     [SerializeField] float speed = 10f;
     [SerializeField] float jumpspeed = 30f;
-    [SerializeField] float dashForce = 30f;
+    float currentSpeed;
+    float currentJumpSpeed;
     CapsuleCollider2D col;
     Animator aim;
     public BoxCollider2D feet;
-    private bool isDash = false;
-    public float DashTime = 1f;
-    float nextDashTime;
-    
+    public bool isAttack = false;
+    public int staminaMax = 100;
+    public int recugeraceStamina = 30;
+    public float recugeraceStaminaTime = 10f;
+    public int stamina;
+    float nextrecugeraceStaminaTime;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
         aim = GetComponent<Animator>();
-        
+        currentJumpSpeed = jumpspeed;
+        currentSpeed = speed;
+        stamina = staminaMax;
+    }
+    public void CostSatamina(int cost)
+    {
+        stamina -= cost;
     }
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-
     }
 
     void OnJump(InputValue value)
@@ -42,16 +55,35 @@ public class PlayerKnight : MonoBehaviour
         {
             rig.velocity += new Vector2(0f, jumpspeed);
         }
+        audioManager.PlaySFX(audioManager.Jump);
     }
     // Update is called once per frame
     void Update()
     {
+        staminaMax = FindObjectOfType<GameSession>().currentManaBuff;
+        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K))
+        {
+            isAttack = true;
+            speed = 0;
+            jumpspeed = 0;
+        }
+        else
+        {
+            isAttack = false;
+            speed = currentSpeed;
+            jumpspeed = currentJumpSpeed;
+        }
         Run();
         Flip();
-        if(Input.GetKey(KeyCode.K))
+        if(stamina >= staminaMax)
         {
-            Dash();
-            
+            stamina = staminaMax;
+            nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
+        }
+        else if (stamina < staminaMax && isAttack == false && Time.time >= nextrecugeraceStaminaTime)
+        {
+            stamina += recugeraceStamina;
+            nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
         }
     }
     void Run()
@@ -61,7 +93,6 @@ public class PlayerKnight : MonoBehaviour
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
         aim.SetBool("Run", havemove);
         
-
         if (feet.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             //Jump - false
@@ -72,10 +103,8 @@ public class PlayerKnight : MonoBehaviour
             //Jump - true
             aim.SetBool("Jump", true);
         }
-
-
     }
-
+    
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
@@ -85,30 +114,9 @@ public class PlayerKnight : MonoBehaviour
         {
 
             transform.localScale = new Vector2(Mathf.Sign(rig.velocity.x), transform.localScale.y);
-
         }
         //RotatePlayer();
+        
     }
-
-    void Dash()
-    {
-        aim.SetTrigger("Dash");
-        if (transform.localScale.x < 0)
-        {
-            rig.velocity = new Vector2(1 * -dashForce, rig.velocity.y);
-        }
-        else if (transform.localScale.x > 0)
-        {
-            rig.velocity = new Vector2(1 * dashForce, rig.velocity.y);
-        }
-        isDash = true;
-        StartCoroutine(StopDash());
-    }
-
-    IEnumerator StopDash()
-    {
-        yield return new WaitForSeconds(DashTime);
-        rig.velocity = new Vector2(0, rig.velocity.y);
-        isDash = false;
-    }
+    
 }
