@@ -94,6 +94,7 @@ public class Bandit : MonoBehaviour
         //Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
+        
     }
     void Run()
     {
@@ -135,12 +136,14 @@ public class Bandit : MonoBehaviour
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = false;
+            liveSlider.direction = Slider.Direction.LeftToRight;
         }
         else if (transform.position.x < player.position.x && !isFlip)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = true;
+            liveSlider.direction = Slider.Direction.RightToLeft;
         }
     }
 }

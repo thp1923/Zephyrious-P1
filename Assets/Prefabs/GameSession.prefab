@@ -1383,7 +1383,7 @@ MonoBehaviour:
   playerlivesMax: 500
   playerlives: 500
   score: 0
-  scoreCost: 100
+  scoreCost: 500
   scoreText: {fileID: 3460156444046028695}
   scoreText2: {fileID: 3663151820121556350}
   Errors: {fileID: 6773000524330070007}
