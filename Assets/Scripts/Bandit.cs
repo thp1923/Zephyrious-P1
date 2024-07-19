@@ -21,9 +21,13 @@ public class Bandit : MonoBehaviour
     float stargravityscale;
     public Slider liveSlider;
     public int pointAdd = 10;
-
+    AudioManager audioManager;
     public float attackRange = 2f;
     public LayerMask attackMask;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,7 @@ public class Bandit : MonoBehaviour
     
     public void TakeDamge(int damge)
     {
+        audioManager.PlaySFX(audioManager.EnemyHit);
         currentHeath -= damge;
         liveSlider.value = currentHeath;
         banditAim.SetTrigger("Hurt");

@@ -8,7 +8,12 @@ public class Blast : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
+    AudioManager audioManager;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         
@@ -22,6 +27,7 @@ public class Blast : MonoBehaviour
 
     public void BlastBoss()
     {
+        audioManager.PlaySFX(audioManager.EnemyExplosion);
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, AttackRange, enemyLayers);
 
         foreach (Collider2D player in hitPlayer)

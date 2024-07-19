@@ -9,10 +9,17 @@ public class ImpactPlayer : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamgeSkill3;
     public float liveTime = 1f;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, liveTime);
+        audioManager.PlaySFX(audioManager.UltimateExplosion);
     }
 
     // Update is called once per frame
