@@ -7,8 +7,7 @@ public class PlayerTakeDamge : MonoBehaviour
     public GameObject Shield;
     public float timeShield = 5f;
     public float timeShieldCoolDown = 10f;
-    public float knockBack = 2f;
-    public float knockBackUp = 2f;
+    
     public BoxCollider2D death;
     public Animator aim;
     public int DefMax = 500;
@@ -68,7 +67,7 @@ public class PlayerTakeDamge : MonoBehaviour
     }
     
 
-    public void takeDamge(int damgeEnemy)
+    public void takeDamge(int damgeEnemy, float knockBack, float knockBackUp)
     {
         if(haveShield == true)
         {

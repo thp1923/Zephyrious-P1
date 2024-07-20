@@ -10,6 +10,8 @@ public class Bandit : MonoBehaviour
     public int maxHeath = 100;
     int currentHeath;
     public int DamgeEnemy = 10;
+    public float knockBack = 5f;
+    public float knockBackUp = 1f;
     Transform player;
     public Transform attackPoint;
     public bool isFlip = false;
@@ -56,7 +58,8 @@ public class Bandit : MonoBehaviour
         FindObjectOfType<GameSession>().AddScore(pointAdd);
         banditAim.SetBool("Death", true);
         GetComponent<Collider2D>().enabled = false;
-        rb.gravityScale = 0;
+        
+        rb.drag = 10;
         this.enabled = false;
 
     }
@@ -118,7 +121,7 @@ public class Bandit : MonoBehaviour
         if (colInfo != null)
         {
             FindObjectOfType<PlayerTakeDamge>().FlipTakeDamge(isFlip);
-            colInfo.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy);
+            colInfo.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy, knockBack, knockBackUp);
         }
     }
     void OnDrawGizmosSelected()
