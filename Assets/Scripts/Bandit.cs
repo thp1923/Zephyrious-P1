@@ -21,9 +21,13 @@ public class Bandit : MonoBehaviour
     float stargravityscale;
     public Slider liveSlider;
     public int pointAdd = 10;
-
+    AudioManager audioManager;
     public float attackRange = 2f;
     public LayerMask attackMask;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,7 @@ public class Bandit : MonoBehaviour
     
     public void TakeDamge(int damge)
     {
+        audioManager.PlaySFX(audioManager.EnemyHit);
         currentHeath -= damge;
         liveSlider.value = currentHeath;
         banditAim.SetTrigger("Hurt");
@@ -89,6 +94,7 @@ public class Bandit : MonoBehaviour
         //Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
+        
     }
     void Run()
     {
@@ -130,12 +136,14 @@ public class Bandit : MonoBehaviour
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = false;
+            liveSlider.direction = Slider.Direction.LeftToRight;
         }
         else if (transform.position.x < player.position.x && !isFlip)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = true;
+            liveSlider.direction = Slider.Direction.RightToLeft;
         }
     }
 }

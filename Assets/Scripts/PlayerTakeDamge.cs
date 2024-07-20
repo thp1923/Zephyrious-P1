@@ -57,7 +57,7 @@ public class PlayerTakeDamge : MonoBehaviour
             Def += DefRegen;
             nextDefRegenTime = Time.time + DefRegenTime;
         }
-        if (Def <= 0)
+        if (Def < 0)
         {
             Def = 0;
             nextDefRegenTime = Time.time + DefRegenTime;
@@ -139,8 +139,4 @@ public class PlayerTakeDamge : MonoBehaviour
         Shield.SetActive(false);
     }
 
-    public void UpDef(int up)
-    {
-        DefMax += up;
-    }
 }

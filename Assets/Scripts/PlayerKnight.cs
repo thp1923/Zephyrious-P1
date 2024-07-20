@@ -20,7 +20,11 @@ public class PlayerKnight : MonoBehaviour
     public float recugeraceStaminaTime = 10f;
     public int stamina;
     float nextrecugeraceStaminaTime;
-
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +42,6 @@ public class PlayerKnight : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-
     }
 
     void OnJump(InputValue value)
@@ -52,6 +55,7 @@ public class PlayerKnight : MonoBehaviour
         {
             rig.velocity += new Vector2(0f, jumpspeed);
         }
+        audioManager.PlaySFX(audioManager.Jump);
     }
     // Update is called once per frame
     void Update()
@@ -89,7 +93,6 @@ public class PlayerKnight : MonoBehaviour
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
         aim.SetBool("Run", havemove);
         
-
         if (feet.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             //Jump - false
@@ -100,8 +103,6 @@ public class PlayerKnight : MonoBehaviour
             //Jump - true
             aim.SetBool("Jump", true);
         }
-
-
     }
     
     void Flip()
@@ -113,9 +114,9 @@ public class PlayerKnight : MonoBehaviour
         {
 
             transform.localScale = new Vector2(Mathf.Sign(rig.velocity.x), transform.localScale.y);
-
         }
         //RotatePlayer();
+        
     }
     
 }
