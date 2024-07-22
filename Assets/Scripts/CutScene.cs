@@ -19,7 +19,7 @@ public class NextSceneCutScene : MonoBehaviour
     {
         if (CutsceneCol.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            SceneManager.LoadScene(SceneName);
+            SceneManager.LoadSceneAsync(SceneName);
             Debug.Log("Player is touching Cutscene collider");
         }
     }
