@@ -26,6 +26,7 @@ public class Bandit : MonoBehaviour
     AudioManager audioManager;
     public float attackRange = 2f;
     public LayerMask attackMask;
+    
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -117,18 +118,20 @@ public class Bandit : MonoBehaviour
     }
     public void Attack()
     {
-        Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, attackMask);
-        if (colInfo != null)
+        Collider2D[] colInfo = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackMask);
+        foreach(Collider2D col in colInfo)
         {
             FindObjectOfType<PlayerTakeDamge>().FlipTakeDamge(isFlip);
-            colInfo.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy, knockBack, knockBackUp);
+            col.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy, knockBack, knockBackUp);
         }
     }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         
     }
+    
     public void Flip()
     {
         Vector3 flipped = transform.localScale;

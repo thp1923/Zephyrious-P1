@@ -693,4 +693,4 @@ MonoBehaviour:
   attackRange: 0.88
   attackMask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 128

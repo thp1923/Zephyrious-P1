@@ -38,4 +38,9 @@ public class Blast : MonoBehaviour
 
         }
     }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
+
+    }
 }
