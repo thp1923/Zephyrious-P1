@@ -241,6 +241,7 @@ MonoBehaviour:
   UltimateExplosion: {fileID: 8300000, guid: 3685b1c2cbd8f9443ab29b1a2734a2a2, type: 3}
   PlayerRun: {fileID: 8300000, guid: 234935b4759818c4fada31a8842a9154, type: 3}
   EnemyHit: {fileID: 8300000, guid: 7089cf8828932464ea531785edf405d6, type: 3}
+  EnemyExplosion: {fileID: 8300000, guid: 257141d1cca62ce418b39b56806f8832, type: 3}
 --- !u!4 &268853376
 Transform:
   m_ObjectHideFlags: 0
