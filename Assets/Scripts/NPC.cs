@@ -11,6 +11,8 @@ public class NPC : MonoBehaviour
     public Text dialogueText;
     public string[] dialogue;
     private int index;
+    public float timeNext = 1f;
+    float nextTime;
 
     public GameObject nextButton;
 
@@ -19,7 +21,7 @@ public class NPC : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.F) && playerIsClose)
+        if (Input.GetKey(KeyCode.F) && playerIsClose == true && Time.time >= nextTime)
         {
             if(Panel.activeInHierarchy)
             {
@@ -30,6 +32,7 @@ public class NPC : MonoBehaviour
                 Panel.SetActive(true);
                 StartCoroutine(Typing());
             }
+            nextTime = Time.time + timeNext;
         }
         if(dialogueText.text == dialogue[index])
         {

@@ -255,8 +255,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1406101885
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1999909138, guid: 92ba7e4483984d14e80d2bb4efade856, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -377,10 +377,11 @@ MonoBehaviour:
   Panel: {fileID: 5572366738803026574}
   dialogueText: {fileID: 8561314411705974280}
   dialogue:
-  - Hello
-  - Who are you?
+  - "Xin ch\xE0o"
+  - "B\u1EA1n \u0103n c*t ko"
+  timeNext: 0.7
   nextButton: {fileID: 8086358641424531463}
-  wordSpeed: 0.06
+  wordSpeed: 0.003
   playerIsClose: 0
 --- !u!1 &5031996042012890036
 GameObject:
