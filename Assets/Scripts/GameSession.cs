@@ -256,9 +256,13 @@ public class GameSession : MonoBehaviour
 
     public void PauseGame()
     {
+        StartCoroutine(TimeStop());
+    }
+    IEnumerator TimeStop()
+    {
+        yield return new WaitForSecondsRealtime(0.9f);
         Time.timeScale = 0;
     }
-
     public void GameOver()
     {
         UI.SetActive(false);
