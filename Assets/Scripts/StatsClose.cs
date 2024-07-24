@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StatsClose : MonoBehaviour
 {
+    
     public void OffStats()
     {
         gameObject.SetActive(false);

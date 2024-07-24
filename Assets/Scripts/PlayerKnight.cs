@@ -15,6 +15,7 @@ public class PlayerKnight : MonoBehaviour
     Animator aim;
     public BoxCollider2D feet;
     public bool isAttack = false;
+    public bool isTele = false;
     public int staminaMax = 100;
     public int recugeraceStamina = 30;
     public float recugeraceStaminaTime = 10f;
@@ -75,7 +76,7 @@ public class PlayerKnight : MonoBehaviour
         }
         Run();
         Flip();
-        if(stamina >= staminaMax)
+        if (stamina >= staminaMax)
         {
             stamina = staminaMax;
             nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
@@ -86,8 +87,14 @@ public class PlayerKnight : MonoBehaviour
             nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
         }
     }
+    
+    
     void Run()
     {
+        if (isTele == true)
+        {
+            return;
+        }
         rig.velocity = new Vector2(moveInput.x * speed, rig.velocity.y);
 
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;

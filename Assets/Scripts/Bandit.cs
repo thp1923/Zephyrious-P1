@@ -123,6 +123,7 @@ public class Bandit : MonoBehaviour
         {
             FindObjectOfType<PlayerTakeDamge>().FlipTakeDamge(isFlip);
             col.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy, knockBack, knockBackUp);
+            
         }
     }
 

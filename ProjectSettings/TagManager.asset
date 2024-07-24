@@ -9,6 +9,8 @@ TagManager:
   - Shield
   - AttackEnemy
   - Audio
+  - Portal
+  - Shake
   layers:
   - Default
   - TransparentFX
