@@ -11,13 +11,16 @@ public class NPC : MonoBehaviour
     public Text dialogueText;
     public string[] dialogue;
     private int index;
+    public int indexLearn;
     public float timeNext = 1f;
     float nextTime;
 
     public GameObject nextButton;
+    public GameObject learnButton;
 
     public float wordSpeed;
     public bool playerIsClose;
+    public bool isLearn;
     void Update()
     {
         
@@ -37,6 +40,11 @@ public class NPC : MonoBehaviour
         if(dialogueText.text == dialogue[index])
         {
             nextButton.SetActive(true);
+        }
+        if (dialogueText.text == dialogue[indexLearn] && isLearn == true)
+        {
+            learnButton.SetActive(true);
+            nextButton.SetActive(false);
         }
     }
 
@@ -63,10 +71,12 @@ public class NPC : MonoBehaviour
         {
             index++;
             dialogueText.text = "";
+            
             StartCoroutine(Typing());
         }
         else
         {
+            
             zeroText() ;
         }
     }

@@ -104,7 +104,9 @@ public class PlayerKnight : MonoBehaviour
             aim.SetBool("Jump", true);
         }
     }
+
     
+
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;

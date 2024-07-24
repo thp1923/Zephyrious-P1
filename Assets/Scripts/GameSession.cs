@@ -44,6 +44,9 @@ public class GameSession : MonoBehaviour
     public GameObject cd2;
     public GameObject cd3;
 
+    public GameObject skillAttack;
+    public GameObject untilAttack;
+
     public TMPro.TextMeshProUGUI PowerText;
     public TMPro.TextMeshProUGUI DefText;
     public TMPro.TextMeshProUGUI HpText;
@@ -280,5 +283,12 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene("Win");
         Destroy(gameObject);
     }
-    
+    public void UISkill()
+    {
+        skillAttack.SetActive(true);
+    }
+    public void UIUntil()
+    {
+        untilAttack.SetActive(true);
+    }
 }
