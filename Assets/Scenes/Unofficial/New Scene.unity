@@ -122,28 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &59761537 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5250335824490265567, guid: 3381826556d3fb743bb04ddd3a24b92e, type: 3}
-  m_PrefabInstance: {fileID: 1321957630120036279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96fe97ca5572536479d55c8feb4ef6a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &59761538 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3128316003493228360, guid: 3381826556d3fb743bb04ddd3a24b92e, type: 3}
-  m_PrefabInstance: {fileID: 1321957630120036279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1019d53c1881791468b8702d09141fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &262783005
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +242,9 @@ MonoBehaviour:
   PlayerRun: {fileID: 8300000, guid: 234935b4759818c4fada31a8842a9154, type: 3}
   EnemyHit: {fileID: 8300000, guid: 7089cf8828932464ea531785edf405d6, type: 3}
   EnemyExplosion: {fileID: 8300000, guid: 257141d1cca62ce418b39b56806f8832, type: 3}
+  speak:
+  - {fileID: 8300000, guid: 257141d1cca62ce418b39b56806f8832, type: 3}
+  - {fileID: 8300000, guid: 78bf5971ec3fa0d4ab35c33996a2300d, type: 3}
 --- !u!4 &268853376
 Transform:
   m_ObjectHideFlags: 0
@@ -1604,6 +1585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3128316003493228360, guid: 3381826556d3fb743bb04ddd3a24b92e, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 268853375}
     - target: {fileID: 4319589304102125161, guid: 3381826556d3fb743bb04ddd3a24b92e, type: 3}
       propertyPath: m_Name
       value: HeroKnight2LearnSkill
@@ -1913,18 +1898,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 650984763852405774, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 59761538}
-    - target: {fileID: 1241497796500397702, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 59761537}
-    - target: {fileID: 1241497796500397702, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 59761538}
     - target: {fileID: 3826371197949587211, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.41
@@ -1968,14 +1941,6 @@ PrefabInstance:
     - target: {fileID: 4117692617055228172, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
       propertyPath: m_Name
       value: HeroKnight2LearnUntil
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597500144275824182, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
-      propertyPath: nextButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597500144275824182, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
-      propertyPath: learnButton
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6889643928162531770, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
       propertyPath: m_Camera
@@ -2254,6 +2219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100113149715622071, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 645798630}
     - target: {fileID: 2011319040032053482, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
       propertyPath: m_Name
       value: PlayerKnight
@@ -2262,6 +2231,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 645798631}
+    - target: {fileID: 3097764359966070276, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 645798630}
     - target: {fileID: 4357971561984445273, guid: ae3c3bf60d9ad504d999da954bc28f60, type: 3}
       propertyPath: m_Camera
       value: 

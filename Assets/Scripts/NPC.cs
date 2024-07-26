@@ -21,6 +21,9 @@ public class NPC : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     public bool isLearn;
+
+    public AudioManager audioManager;
+    
     void Update()
     {
         
@@ -57,7 +60,8 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach(char letter in dialogue[index].ToCharArray())
+        audioManager.PlaySFXNPC(audioManager.speak);
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             
             dialogueText.text += letter;

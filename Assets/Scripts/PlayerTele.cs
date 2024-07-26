@@ -7,13 +7,16 @@ public class PlayerTele : MonoBehaviour
     GameObject Cong;
     public float time = 2f;
     public GameObject UI;
+    public GameObject UIEffect;
     public Animator aimUI;
+    public Animator aimUIEffect;
     // Update is called once per frame
     void Update()
     {
         if(Cong != null)
         {
             UI.SetActive(true);
+            UIEffect.SetActive(true);
             Time.timeScale = 0;
             StartCoroutine(DichChuyen());
         }
@@ -36,6 +39,7 @@ public class PlayerTele : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(time);
         aimUI.SetTrigger("Close");
+        aimUIEffect.SetTrigger("Close");
         Time.timeScale = 1;
         transform.position = Cong.GetComponent<Portal>().GetDiemDichChuyenDen().position;
         
