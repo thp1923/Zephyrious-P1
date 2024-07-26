@@ -11,6 +11,7 @@ TagManager:
   - Audio
   - Portal
   - Shake
+  - NPC
   layers:
   - Default
   - TransparentFX

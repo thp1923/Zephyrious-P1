@@ -22,6 +22,7 @@ public class PlayerKnight : MonoBehaviour
     public int stamina;
     float nextrecugeraceStaminaTime;
     AudioManager audioManager;
+    public GameObject Speak;
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -61,6 +62,10 @@ public class PlayerKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.F))
+        {
+            Speak.SetActive(false);
+        }
         staminaMax = FindObjectOfType<GameSession>().currentManaBuff;
         if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K))
         {
@@ -112,8 +117,21 @@ public class PlayerKnight : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            Speak.SetActive(true);
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            Speak.SetActive(false);
+        }
+    }
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
