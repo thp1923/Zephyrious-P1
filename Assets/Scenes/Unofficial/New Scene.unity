@@ -1634,6 +1634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeroKnight2LearnUntil
       objectReference: {fileID: 0}
+    - target: {fileID: 6597500144275824182, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 268853375}
     - target: {fileID: 6889643928162531770, guid: 62fea89720f88474baa945977bfe9b13, type: 3}
       propertyPath: m_Camera
       value: 
