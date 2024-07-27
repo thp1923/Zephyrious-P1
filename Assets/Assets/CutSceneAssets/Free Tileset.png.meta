@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd08a6782a66e1d40a784a34a3cc6097
+guid: d71c08e487ba2544293c7331a5641f64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dwarf1_run_0
+      name: Free Tileset_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 23
-        width: 42
-        height: 84
+        x: 32
+        y: 112
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90e326fb0bfa4040839bdd80e60da14
-      internalID: -304353516
+      spriteID: d3cc2e60dc76b3b47b996031e7d0d6b2
+      internalID: 1680326569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dwarf1_run_1
+      name: Free Tileset_1
       rect:
         serializedVersion: 2
-        x: 173
-        y: 23
-        width: 41
-        height: 84
+        x: 64
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b87b842d1b75cd4bb95fb6eb7856b19
-      internalID: 97034249
+      spriteID: 424a034dea698a341bee5e79fe2478b0
+      internalID: 457703880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dwarf1_run_2
+      name: Free Tileset_2
       rect:
         serializedVersion: 2
-        x: 312
-        y: 22
-        width: 53
-        height: 84
+        x: 96
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b0b76a84f693f541a67762619ab8410
-      internalID: -1859825025
+      spriteID: 0bd3983c0a6d836479864f8607375ddc
+      internalID: -118890709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dwarf1_run_3
+      name: Free Tileset_3
       rect:
         serializedVersion: 2
-        x: 454
-        y: 22
+        x: 208
+        y: 96
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7096f3b01821d484f8116a1bc545a10f
+      internalID: -986277467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc91cd3f4b3529c4293bbadd704f23f7
+      internalID: -1312151294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464f8285d14319c48999ef95d17ae8ca
+      internalID: 39849236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ebd54de0594ad49b25a6fed64e38b0
+      internalID: -953298503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
         width: 48
-        height: 84
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,92 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd701d4703cbd84eaa3a0985768f5f1
-      internalID: -1334910311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dwarf1_run_4
-      rect:
-        serializedVersion: 2
-        x: 587
-        y: 23
-        width: 40
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0708bd27f4ae64a4cb817c4f5e68e1fa
-      internalID: 463528422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dwarf1_run_5
-      rect:
-        serializedVersion: 2
-        x: 725
-        y: 23
-        width: 43
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1dca77d4e8e9674ea7c42102503e749
-      internalID: -843051341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dwarf1_run_6
-      rect:
-        serializedVersion: 2
-        x: 866
-        y: 23
-        width: 42
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35780ea7231c0b94db90464822201489
-      internalID: 573184494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dwarf1_run_7
-      rect:
-        serializedVersion: 2
-        x: 1003
-        y: 22
-        width: 52
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 812ecce2dd8514743b517192456e57dc
-      internalID: -327043266
+      spriteID: 0ffcaaf56bfd7464fb3c1c2217f08dea
+      internalID: 2010594380
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dwarf1_run_0: -304353516
-      dwarf1_run_1: 97034249
-      dwarf1_run_2: -1859825025
-      dwarf1_run_3: -1334910311
-      dwarf1_run_4: 463528422
-      dwarf1_run_5: -843051341
-      dwarf1_run_6: 573184494
-      dwarf1_run_7: -327043266
+      Free Tileset_0: 1680326569
+      Free Tileset_1: 457703880
+      Free Tileset_2: -118890709
+      Free Tileset_3: -986277467
+      Free Tileset_4: -1312151294
+      Free Tileset_5: 39849236
+      Free Tileset_6: -953298503
+      Free Tileset_7: 2010594380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
