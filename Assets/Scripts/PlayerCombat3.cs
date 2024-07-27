@@ -33,7 +33,6 @@ public class PlayerCombat3 : MonoBehaviour
             FindObjectOfType<PlayerKnight>().isAttack == true &&
             FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
         {
-            audioManager.PlaySFX(audioManager.SwordUltimate);
             aim.SetTrigger("Attack3");
             Effect.SetActive(true);
             Time.timeScale = 0;
@@ -41,6 +40,10 @@ public class PlayerCombat3 : MonoBehaviour
             nextTime = Time.time + TimeRate;
             CDUntil = TimeRate;
         }
+    }
+    public void UntilAudio()
+    {
+        audioManager.PlaySFX(audioManager.SwordUltimate);
     }
     void Attack3()
     {
