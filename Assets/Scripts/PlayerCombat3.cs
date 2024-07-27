@@ -13,6 +13,7 @@ public class PlayerCombat3 : MonoBehaviour
     float nextTime;
     public float CDUntil;
     AudioManager audioManager;
+    public GameObject Effect;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class PlayerCombat3 : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.SwordUltimate);
             aim.SetTrigger("Attack3");
+            Effect.SetActive(true);
+            Time.timeScale = 0;
             GetComponent<PlayerKnight>().CostSatamina(staminaCost);
             nextTime = Time.time + TimeRate;
             CDUntil = TimeRate;

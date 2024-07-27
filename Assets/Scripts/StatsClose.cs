@@ -9,4 +9,8 @@ public class StatsClose : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    public void timeNext()
+    {
+        Time.timeScale = 1;
+    }
 }
