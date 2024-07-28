@@ -154,7 +154,7 @@ public class GameSession : MonoBehaviour
         }
         powerPoint += 1;
         score -= scoreCost;
-        
+        Damge();
         PowerText.text = powerPoint.ToString();
         
     }

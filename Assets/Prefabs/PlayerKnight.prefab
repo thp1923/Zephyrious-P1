@@ -900,7 +900,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1099225889
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 300
   m_Sprite: {fileID: -1117699504, guid: a1ab3f7366fb59b4aa349e3176a5b497, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8320564436158458614}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3
+    OrthographicSize: 4
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1194,7 +1194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5471837208055274951, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5471837208055274951, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_SortingOrder
