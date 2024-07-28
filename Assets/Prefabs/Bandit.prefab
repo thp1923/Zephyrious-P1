@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1406101885
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 317b8365a4649ab459f6cb58ec8f9f18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,13 +197,12 @@ MonoBehaviour:
   banditAim: {fileID: 1220294553957340447}
   maxHeath: 100
   DamgeEnemy: 100
-  player: {fileID: 0}
   attackPoint: {fileID: 4308850579978233461}
   distance: 8
   attackRange: 0.42
   attackMask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 128
 --- !u!1 &8690543814506729712
 GameObject:
   m_ObjectHideFlags: 0
