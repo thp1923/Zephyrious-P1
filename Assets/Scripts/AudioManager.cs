@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
+    
     public void PlaySFXNPC(AudioClip[] clip)
     {
         if (index >= 0 && index < clip.Length)
