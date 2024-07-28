@@ -166,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07087898, y: -0.48671424}
+  m_Offset: {x: -0.07087898, y: -0.36486888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2658043, y: 0.026571512}
+  m_Size: {x: 0.2658043, y: 0.27026224}
   m_EdgeRadius: 0
 --- !u!1 &1470665303626272313
 GameObject:
@@ -560,8 +560,8 @@ MonoBehaviour:
   banditAim: {fileID: 1220294553957340447}
   maxHeath: 100
   DamgeEnemy: 50
-  knockBack: 5
-  knockBackUp: 1
+  knockBack: 2
+  knockBackUp: 0.5
   attackPoint: {fileID: 4308850579978233461}
   isFlip: 0
   here: {fileID: 4292311649737163164}
@@ -573,7 +573,7 @@ MonoBehaviour:
   attackRange: 0.42
   attackMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
 --- !u!1 &6700879050683455159
 GameObject:
   m_ObjectHideFlags: 0

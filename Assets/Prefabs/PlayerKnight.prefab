@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 6021453262896216412}
   - component: {fileID: 6121072371455225507}
   - component: {fileID: 5311235566208503208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4182420528594435599, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4889632443992678075, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Size.x
