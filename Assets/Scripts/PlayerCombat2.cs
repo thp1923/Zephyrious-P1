@@ -29,7 +29,7 @@ public class PlayerCombat2 : MonoBehaviour
     void Update()
     {
         CDSkill -= Time.deltaTime;
-        if (Input.GetKey(KeyCode.L) && Time.time >= nextTime && 
+        if (Input.GetKey(KeyCode.K) && Time.time >= nextTime && 
             FindObjectOfType<PlayerKnight>().isAttack == true && 
             FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
         {

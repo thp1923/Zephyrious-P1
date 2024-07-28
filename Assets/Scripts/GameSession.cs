@@ -44,6 +44,9 @@ public class GameSession : MonoBehaviour
     public GameObject cd2;
     public GameObject cd3;
 
+    public GameObject skillAttack;
+    public GameObject untilAttack;
+
     public TMPro.TextMeshProUGUI PowerText;
     public TMPro.TextMeshProUGUI DefText;
     public TMPro.TextMeshProUGUI HpText;
@@ -151,7 +154,7 @@ public class GameSession : MonoBehaviour
         }
         powerPoint += 1;
         score -= scoreCost;
-        
+        Damge();
         PowerText.text = powerPoint.ToString();
         
     }
@@ -258,7 +261,7 @@ public class GameSession : MonoBehaviour
     {
         Time.timeScale = 0;
     }
-
+    
     public void GameOver()
     {
         UI.SetActive(false);
@@ -276,5 +279,12 @@ public class GameSession : MonoBehaviour
         SceneManager.LoadScene("Win");
         Destroy(gameObject);
     }
-    
+    public void UISkill()
+    {
+        skillAttack.SetActive(true);
+    }
+    public void UIUntil()
+    {
+        untilAttack.SetActive(true);
+    }
 }

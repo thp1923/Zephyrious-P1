@@ -7,8 +7,7 @@ public class PlayerTakeDamge : MonoBehaviour
     public GameObject Shield;
     public float timeShield = 5f;
     public float timeShieldCoolDown = 10f;
-    public float knockBack = 2f;
-    public float knockBackUp = 2f;
+    
     public BoxCollider2D death;
     public Animator aim;
     public int DefMax = 500;
@@ -57,7 +56,7 @@ public class PlayerTakeDamge : MonoBehaviour
             Def += DefRegen;
             nextDefRegenTime = Time.time + DefRegenTime;
         }
-        if (Def <= 0)
+        if (Def < 0)
         {
             Def = 0;
             nextDefRegenTime = Time.time + DefRegenTime;
@@ -68,7 +67,7 @@ public class PlayerTakeDamge : MonoBehaviour
     }
     
 
-    public void takeDamge(int damgeEnemy)
+    public void takeDamge(int damgeEnemy, float knockBack, float knockBackUp)
     {
         if(haveShield == true)
         {
@@ -139,8 +138,4 @@ public class PlayerTakeDamge : MonoBehaviour
         Shield.SetActive(false);
     }
 
-    public void UpDef(int up)
-    {
-        DefMax += up;
-    }
 }

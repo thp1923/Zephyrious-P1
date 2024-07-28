@@ -13,6 +13,7 @@ public class PlayerCombat3 : MonoBehaviour
     float nextTime;
     public float CDUntil;
     AudioManager audioManager;
+    public GameObject Effect;
 
     private void Awake()
     {
@@ -28,16 +29,22 @@ public class PlayerCombat3 : MonoBehaviour
     void Update()
     {
         CDUntil -= Time.deltaTime;
-        if (Input.GetKey(KeyCode.K) && Time.time >= nextTime && 
+        if (Input.GetKey(KeyCode.L) && Time.time >= nextTime && 
             FindObjectOfType<PlayerKnight>().isAttack == true &&
             FindObjectOfType<PlayerKnight>().stamina >= staminaCost)
         {
-            audioManager.PlaySFX(audioManager.SwordUltimate);
+            audioManager.PlaySFX(audioManager.Flash);
             aim.SetTrigger("Attack3");
+            Effect.SetActive(true);
+            Time.timeScale = 0;
             GetComponent<PlayerKnight>().CostSatamina(staminaCost);
             nextTime = Time.time + TimeRate;
             CDUntil = TimeRate;
         }
+    }
+    public void UntilAudio()
+    {
+        audioManager.PlaySFX(audioManager.SwordUltimate);
     }
     void Attack3()
     {
