@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip PlayerRun;
     public AudioClip EnemyHit;
     public AudioClip EnemyExplosion;
+    public AudioClip Flash;
     [Header("-------- Audio Clip Speak -------------")]
     public AudioClip[] speak;
     private int index;
