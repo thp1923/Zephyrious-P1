@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextSceneCutScene : MonoBehaviour
+public class CutScene : MonoBehaviour
 {
     public string SceneName;
     public Collider2D CutsceneCol;
