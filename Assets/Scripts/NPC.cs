@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
     public bool isLearn;
 
-    public AudioManager audioManager;
+    //public AudioManager audioManager;
     
     void Update()
     {
@@ -60,7 +60,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        audioManager.PlaySFXNPC(audioManager.speak);
+        //audioManager.PlaySFXNPC(audioManager.speak);
         foreach (char letter in dialogue[index].ToCharArray())
         {
             
