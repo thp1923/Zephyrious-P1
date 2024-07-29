@@ -336,10 +336,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1406101885
-  m_SortingLayer: 3
+  m_SortingLayerID: -1099225889
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1999909138, guid: 92ba7e4483984d14e80d2bb4efade856, type: 3}
+  m_Sprite: {fileID: -1643657023, guid: 7c8be993099f30840ab01afbe876859c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -360,7 +360,7 @@ Animator:
   m_GameObject: {fileID: 4117692617055228172}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 089d844317b71634e9d7f6b29214178c, type: 2}
+  m_Controller: {fileID: 9100000, guid: eaaae96cdc5575a45b15679312cbb949, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -430,18 +430,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.32955676}
+  m_Offset: {x: 0.0066230297, y: 0.024778545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.90625}
+    oldSize: {x: 0.46666667, y: 1.0333333}
     newSize: {x: 1, y: 1.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.2471365}
+  m_Size: {x: 0.7483225, y: 1.0683132}
   m_EdgeRadius: 0
 --- !u!114 &6597500144275824182
 MonoBehaviour:
@@ -513,8 +513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -515, y: 61}
-  m_SizeDelta: {x: 215.56, y: 254.07}
+  m_AnchoredPosition: {x: -517, y: 35.450012}
+  m_SizeDelta: {x: 103, y: 202.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3649324598546901738
 CanvasRenderer:
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1999909138, guid: 92ba7e4483984d14e80d2bb4efade856, type: 3}
+  m_Sprite: {fileID: -1643657023, guid: 7c8be993099f30840ab01afbe876859c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -712,7 +712,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Knight
+  m_Text: Ragnar
 --- !u!1 &6938063422620829055
 GameObject:
   m_ObjectHideFlags: 0
