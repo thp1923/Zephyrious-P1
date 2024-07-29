@@ -974,7 +974,7 @@ Transform:
   m_GameObject: {fileID: 7732415567797122071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.28, y: -7.97, z: -10.072823}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1222,7 +1222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: TimeRate
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_Enabled
@@ -1238,15 +1238,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.97
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07282287
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1254,15 +1254,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948919827562157029, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   attack: {fileID: 1964087966111136499, guid: 2a5ba60e66da4804e80206a99564dbd7, type: 3}
   FirePoint: {fileID: 4656259561619000846}
   speed: 50
-  TimeRate: 1
+  TimeRate: 10
   aim: {fileID: 4038291161526676091}
   staminaCost: 70
   CDUntil: 0

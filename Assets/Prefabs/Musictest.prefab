@@ -183,12 +183,14 @@ MonoBehaviour:
   SwordSkill: {fileID: 8300000, guid: 6aa2bc68aaf8a2c4bb0d6a430877b220, type: 3}
   SwordUltimate: {fileID: 8300000, guid: c7837de1be7383d408a025f1ef76ac05, type: 3}
   PlayerDeath: {fileID: 0}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 8300000, guid: 78bf5971ec3fa0d4ab35c33996a2300d, type: 3}
   UltimateExplosion: {fileID: 8300000, guid: 3685b1c2cbd8f9443ab29b1a2734a2a2, type: 3}
   PlayerRun: {fileID: 8300000, guid: 234935b4759818c4fada31a8842a9154, type: 3}
   EnemyHit: {fileID: 8300000, guid: 7089cf8828932464ea531785edf405d6, type: 3}
   EnemyExplosion: {fileID: 8300000, guid: 257141d1cca62ce418b39b56806f8832, type: 3}
   Flash: {fileID: 8300000, guid: 71463c27723821e40a2b97b50e5ddcca, type: 3}
+  TakeDamge: {fileID: 8300000, guid: e946c95e06efd214eb626d662479257f, type: 3}
+  TakeDamgeShield: {fileID: 8300000, guid: f2d2f857d522f424fac294991ec5df58, type: 3}
   speak:
   - {fileID: 8300000, guid: 257141d1cca62ce418b39b56806f8832, type: 3}
   - {fileID: 8300000, guid: 78bf5971ec3fa0d4ab35c33996a2300d, type: 3}

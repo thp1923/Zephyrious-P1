@@ -287,4 +287,8 @@ public class GameSession : MonoBehaviour
     {
         untilAttack.SetActive(true);
     }
+    public void Heal()
+    {
+        playerlives = playerlivesMax;
+    }
 }
