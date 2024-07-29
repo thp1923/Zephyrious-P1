@@ -21,6 +21,8 @@ public class PlayerTakeDamge : MonoBehaviour
     float nextTime;
     bool haveShield = false;
     Rigidbody2D rb;
+
+    AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +32,10 @@ public class PlayerTakeDamge : MonoBehaviour
         death.gameObject.SetActive(false);
         Def = DefMax;
     }
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -72,11 +77,11 @@ public class PlayerTakeDamge : MonoBehaviour
         if(haveShield == true)
         {
             Def -= damgeEnemy;
-            
+            audioManager.PlaySFX(audioManager.TakeDamgeShield);
         }
         else if (haveShield == false)
         {
-            
+            audioManager.PlaySFX(audioManager.TakeDamge);
             rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
@@ -94,6 +99,7 @@ public class PlayerTakeDamge : MonoBehaviour
         }
         if (FindObjectOfType<GameSession>().playerlives <= 0)
         {
+            audioManager.PlaySFX(audioManager.GameOver);
             Die();
         }
     }
