@@ -238,7 +238,7 @@ MonoBehaviour:
   here: {fileID: 5306779500683436482}
   distance: 10
   isBoss: 0
-  isDestroy: 0
+  isDestroy: 1
   liveSlider: {fileID: 9013051982332480827}
   pointAdd: 100
   attackRange: 0.54
