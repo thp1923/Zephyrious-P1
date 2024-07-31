@@ -1141,10 +1141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4694c2a8753224c9e9e9cbe44e28d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerlivesMax: 500
-  playerlives: 500
+  playerlivesMax: 400
+  playerlives: 400
   score: 0
-  scoreCost: 500
+  scoreCost: 375
   scoreText: {fileID: 3460156444046028695}
   scoreText2: {fileID: 3663151820121556350}
   Errors: {fileID: 6773000524330070007}
@@ -1154,8 +1154,8 @@ MonoBehaviour:
   StaminaPoint: 1
   UpPower: 10
   UpDef: 10
-  UpHp: 10
-  UpMana: 10
+  UpHp: 20
+  UpMana: 15
   BuffSkill: 2
   BuffUntil: 3
   BuffImpack: 2

@@ -1186,11 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5220513196569260106, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: recugeraceStamina
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5220513196569260106, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: recugeraceStaminaTime
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5471837208055274951, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_SortingLayer
@@ -1231,6 +1231,10 @@ PrefabInstance:
     - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: AttackRange
       value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767042197942182329, guid: 4425da174196f994abe552e2eea92d45, type: 3}
+      propertyPath: staminaCost
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6019425836177487645, guid: 4425da174196f994abe552e2eea92d45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1332,7 +1336,7 @@ MonoBehaviour:
   speed: 50
   TimeRate: 10
   aim: {fileID: 4038291161526676091}
-  staminaCost: 70
+  staminaCost: 300
   CDUntil: 0
   Effect: {fileID: 6100815922999786130}
 --- !u!114 &5064840024727901637

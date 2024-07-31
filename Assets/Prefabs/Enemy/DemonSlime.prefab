@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.09, y: 0.365}
+  m_AnchoredPosition: {x: -0.09, y: 0.77}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1958440140949605637
@@ -589,8 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   banditAim: {fileID: 2090770947395327150}
-  maxHeath: 10000
-  DamgeEnemy: 1600
+  maxHeath: 9000
+  DamgeEnemy: 750
   knockBack: 5
   knockBackUp: 1
   attackPoint: {fileID: 6589301731022662705}
