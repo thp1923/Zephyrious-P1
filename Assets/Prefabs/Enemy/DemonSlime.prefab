@@ -589,8 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   banditAim: {fileID: 2090770947395327150}
-  maxHeath: 1000
-  DamgeEnemy: 800
+  maxHeath: 10000
+  DamgeEnemy: 1600
   knockBack: 5
   knockBackUp: 1
   attackPoint: {fileID: 6589301731022662705}

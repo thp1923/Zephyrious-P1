@@ -216,7 +216,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1022749030471398734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,9 +276,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   banditAim: {fileID: 898828435184616344}
   maxHeath: 50
-  DamgeEnemy: 15
-  knockBack: 5
-  knockBackUp: 1
+  DamgeEnemy: 30
+  knockBack: 0.2
+  knockBackUp: 0
   attackPoint: {fileID: 8979262757792699845}
   isFlip: 0
   here: {fileID: 2448456611360787799}
@@ -287,7 +287,7 @@ MonoBehaviour:
   isDestroy: 1
   liveSlider: {fileID: 2080158666938012319}
   pointAdd: 100
-  attackRange: 0.33
+  attackRange: 0.45
   attackMask:
     serializedVersion: 2
     m_Bits: 128
