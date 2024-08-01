@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053707123, y: -0.4355489}
+  m_Offset: {x: -0.06689167, y: -0.19382912}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65730286, y: 0.1289022}
+  m_Size: {x: 0.40239906, y: 0.61234176}
   m_EdgeRadius: 0
 --- !u!1 &1715110463817975781
 GameObject:
@@ -287,7 +287,7 @@ MonoBehaviour:
   isDestroy: 1
   liveSlider: {fileID: 2080158666938012319}
   pointAdd: 100
-  attackRange: 0.45
+  attackRange: 0.66
   attackMask:
     serializedVersion: 2
     m_Bits: 128
