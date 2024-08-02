@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 147991305}
   - component: {fileID: 147991304}
   - component: {fileID: 147991307}
+  - component: {fileID: 147991308}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -411,6 +412,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &147991308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147991302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  m_EffectDistance: {x: 6, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &178929520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1288,7 @@ GameObject:
   - component: {fileID: 594537645}
   - component: {fileID: 594537644}
   - component: {fileID: 594537647}
+  - component: {fileID: 594537648}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1414,6 +1431,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &594537648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594537642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  m_EffectDistance: {x: 8.83, y: 6.24}
+  m_UseGraphicAlpha: 1
 --- !u!1 &626203328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,7 +2099,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -6
+  m_SortingOrder: -9
   m_Sprite: {fileID: 1170105809, guid: 9555e355ef275ce40a73a1ffe101a13e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
   m_FlipX: 0
@@ -2088,7 +2120,7 @@ Transform:
   m_GameObject: {fileID: 1056255320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 1.12, z: 0}
+  m_LocalPosition: {x: -2.7, y: 1.31, z: 0}
   m_LocalScale: {x: 1.3225, y: 1.3225, z: 1.3225}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4148,9 +4180,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -7
   m_Sprite: {fileID: 21300000, guid: ecc6189e7aab1ca40bbd259258be01c2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -4263,6 +4295,7 @@ GameObject:
   - component: {fileID: 1914954969}
   - component: {fileID: 1914954968}
   - component: {fileID: 1914954971}
+  - component: {fileID: 1914954972}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -4405,6 +4438,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1914954972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914954966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  m_EffectDistance: {x: 8.85, y: 6.37}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1920474297
 GameObject:
   m_ObjectHideFlags: 0
