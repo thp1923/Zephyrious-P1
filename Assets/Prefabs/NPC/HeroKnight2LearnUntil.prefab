@@ -561,9 +561,14 @@ MonoBehaviour:
   Panel: {fileID: 5578581263607903105}
   dialogueText: {fileID: 373428551576819440}
   dialogue:
-  - "Xin ch\xE0o"
-  - "B\u1EA1n \u0103n c*t ko?"
-  indexLearn: 1
+  - "N\u1EBFu c\u1EADu mu\u1ED1n ti\u1EBFn s\xE2u h\u01A1n th\xEC t\xF4i ngh\u0129
+    l\xE0 hi\u1EC7n t\u1EA1i c\u1EADu ch\u01B0a \u0111\u1EE7 s\u1EE9c \u0111\xE2u
+    !"
+  - "Nh\u01B0ng c\u1EADu g\u1EB7p may, v\xEC \u0111\xE3 c\xF3 t\xF4i \u1EDF \u0111\xE2y."
+  - "T\xF4i s\u1EBD d\u1EA1y cho c\u1EADu m\u1ED9t tuy\u1EC7t k\u1EF9 m\xE0 t\xF4i
+    \u0111\xE3 m\u1EA5t c\u1EA3 \u0111\u1EDDi \u0111\u1EC3 t\u1EA1o ra."
+  - "Sao h\u1EA3? C\xF3 mu\u1ED1n h\u1ECDc kh\xF4ng ?"
+  indexLearn: 3
   timeNext: 0.7
   nextButton: {fileID: 7486717081119255331}
   learnButton: {fileID: 7793678883138026231}

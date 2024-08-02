@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1153388620337320849}
-  - component: {fileID: 417204835321658970}
+  - component: {fileID: 3826407738203213606}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -209,8 +209,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2083917646636611113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &417204835321658970
-BoxCollider2D:
+--- !u!70 &3826407738203213606
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -241,19 +241,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0655632, y: 0.093907654}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.344944, y: 1.1878153}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.044133823, y: -0.30895874}
+  m_Size: {x: 1.4266324, y: 0.38209194}
+  m_Direction: 1
 --- !u!1 &2745006626576547774
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 3479798155527614120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: -0.71, z: 0}
+  m_LocalPosition: {x: -1.49, y: -1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -601,11 +591,12 @@ MonoBehaviour:
   isDestroy: 1
   liveSlider: {fileID: 268932808313959895}
   pointAdd: 1000
-  attackRange: 1.66
+  attackRange: 1.22
   attackMask:
     serializedVersion: 2
     m_Bits: 128
-  box: {fileID: 417204835321658970}
+  box: {fileID: 0}
+  isDeath: 0
 --- !u!1 &7607830287697697079
 GameObject:
   m_ObjectHideFlags: 0

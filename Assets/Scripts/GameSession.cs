@@ -93,7 +93,7 @@ public class GameSession : MonoBehaviour
             Destroy(gameObject);
         else
             DontDestroyOnLoad(gameObject); //khong cho huy khi load
-        
+        Time.timeScale = 1;
     }
 
     private void Update()
@@ -290,5 +290,13 @@ public class GameSession : MonoBehaviour
     public void Heal()
     {
         playerlives = playerlivesMax;
+    }
+    public void FalseUI()
+    {
+        UI.SetActive(false);
+    }
+    public void TrueUI()
+    {
+        UI.SetActive(true);
     }
 }

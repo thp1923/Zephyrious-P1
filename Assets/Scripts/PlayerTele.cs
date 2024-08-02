@@ -20,7 +20,7 @@ public class PlayerTele : MonoBehaviour
             UI.SetActive(true);
             UIEffect.SetActive(true);
             Time.timeScale = 0;
-            StartCoroutine(DichChuyen());
+            StartCoroutine(LoadNextLevel());
         }
         if (Cong2 != null)
         {
@@ -68,5 +68,18 @@ public class PlayerTele : MonoBehaviour
         aimUIEffect.SetTrigger("Close");
         SceneManager.LoadScene("BossRoom");
         Time.timeScale = 1;
+    }
+    IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSecondsRealtime(1f);//tre 1 giay
+        //lay index cua scene hien tai
+        int currentindex = SceneManager.GetActiveScene().buildIndex;
+        int nextindex = currentindex + 1; //scene tiep theo
+
+        //vuot khoi so scene dang co
+        if (nextindex == SceneManager.sceneCountInBuildSettings)
+            nextindex = 0;//hoac xu ly ket thuc game...
+
+        SceneManager.LoadScene(nextindex);
     }
 }

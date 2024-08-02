@@ -645,8 +645,9 @@ MonoBehaviour:
   Panel: {fileID: 7819153726441575605}
   dialogueText: {fileID: 5612486946461604080}
   dialogue:
-  - "Xin ch\xE0o"
-  - "B\u1EA1n c\u1EA7n m\u1EDF c\u1ED5ng kh\xF4ng ?"
+  - "C\xF3 v\u1EBB anh l\xE0 ng\u01B0\u1EDDi \u0111\u01B0\u1EE3c ch\u1ECDn."
+  - "C\xF3 mu\u1ED1n ti\u1EBFn s\xE2u h\u01A1n \u0111\u1EC3 \u0111o\u1EA1t l\u1EA5y
+    s\u1EE9c m\u1EA1nh hay kh\xF4ng ?"
   indexLearn: 1
   timeNext: 0.7
   nextButton: {fileID: 2822663517403449862}
@@ -1326,7 +1327,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2461383773363067904, guid: e16f635a025b6e44793741d3a7139e28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

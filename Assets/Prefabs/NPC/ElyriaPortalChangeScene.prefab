@@ -744,8 +744,11 @@ MonoBehaviour:
   Panel: {fileID: 2675425955937367474}
   dialogueText: {fileID: 8289684097083806120}
   dialogue:
-  - "Xin ch\xE0o"
-  - "B\u1EA1n c\u1EA7n m\u1EDF c\u1ED5ng kh\xF4ng ?"
+  - "Kh\xF4ng ng\u1EDD l\xE0 anh c\xF3 th\u1EC3 \u0111\xE1nh b\u1EA1i t\xEAn hi\u1EC7p
+    s\u0129 \u0111\xF3 !"
+  - "V\u1EADy c\xF3 mu\u1ED1n t\xF4i \u0111\u01B0a \u0111\u1EBFn n\u01A1i s\u1EE9c
+    m\u1EA1nh t\u1ED3n l\u1EA1i ( n\u01A1i qu\u1EF7 v\u01B0\u01A1ng \u1EDF) hay kh\xF4ng
+    ?"
   indexLearn: 1
   timeNext: 0.7
   nextButton: {fileID: 1001268576719522817}

@@ -412,9 +412,10 @@ MonoBehaviour:
   Panel: {fileID: 1475697508249447910}
   dialogueText: {fileID: 5215176059463894000}
   dialogue:
-  - "Xin ch\xE0o"
-  - "B\u1EA1n c\u1EA7n h\u1ED3i ph\u1EE5c kh\xF4ng ?"
-  indexLearn: 1
+  - "T\xF4i th\u1EA5y anh h\xECnh nh\u01B0 kh\xF4ng kh\u1ECFe !"
+  - "C\u1EA7n t\xF4i ch\u1EEDa tr\u1ECB kh\xF4ng ?"
+  - "\u0110\u1EEBng lo l\u1EAFng t\xF4i kh\xF4ng ph\u1EA3i ph\xF9 th\u1EE7y \u0111\xE2u."
+  indexLearn: 2
   timeNext: 0.7
   nextButton: {fileID: 2079718421453483744}
   learnButton: {fileID: 8187078386497673213}

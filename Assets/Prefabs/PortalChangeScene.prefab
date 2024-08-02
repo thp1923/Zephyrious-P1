@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 6172614705803194083}
   - component: {fileID: 1244771795795746568}
   - component: {fileID: 8297320963526676101}
-  - component: {fileID: 2992521089447720180}
   m_Layer: 0
   m_Name: PortalChangeScene
-  m_TagString: Portal2
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,15 +142,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8403282, y: 1.875}
   m_Direction: 0
---- !u!114 &2992521089447720180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4468084723559119394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ef2f37f8de3a9459d0ccd8c5e33aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -13,6 +13,8 @@ TagManager:
   - Shake
   - NPC
   - Portal2
+  - UI
+  - GameSession
   layers:
   - Default
   - TransparentFX

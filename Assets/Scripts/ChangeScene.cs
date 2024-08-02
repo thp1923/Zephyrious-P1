@@ -7,8 +7,10 @@ public class ChangeScene : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Time.timeScale = 0;
-        StartCoroutine(SceneBoss());
+        if (collision.tag == "Player")//va cham voi player
+        {
+            StartCoroutine(SceneBoss());//goi ham voi do tre
+        }
     }
     IEnumerator SceneBoss()
     {

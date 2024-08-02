@@ -983,8 +983,9 @@ MonoBehaviour:
   Panel: {fileID: 1918821601704524733}
   dialogueText: {fileID: 5918349861349615057}
   dialogue:
-  - "Xin ch\xE0o"
-  - "B\u1EA1n \u0103n c*t ko"
+  - "T\xF4i nh\xECn th\u1EA5y c\u1EADu c\xF3 t\u1ED1 ch\u1EA5t \u0111\u1EC3 l\u1EC9nh
+    h\u1ED9i chi\xEAu th\u1EE9c c\u1EE7a t\xF4i !"
+  - "C\xF3 mu\u1ED1n h\u1ECDc kh\xF4ng ?"
   indexLearn: 1
   timeNext: 0.7
   nextButton: {fileID: 2862224473996007807}

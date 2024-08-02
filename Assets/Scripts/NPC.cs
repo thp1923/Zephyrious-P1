@@ -22,8 +22,13 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
     public bool isLearn;
 
-    //public AudioManager audioManager;
-    
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         
@@ -53,6 +58,7 @@ public class NPC : MonoBehaviour
 
     public void zeroText()
     {
+        audioManager.PlaySFX(audioManager.Next);
         dialogueText.text = "";
         index = 0;
         Panel.SetActive(false);
@@ -60,7 +66,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        //audioManager.PlaySFXNPC(audioManager.speak);
+        audioManager.PlaySFX(audioManager.Next);
         foreach (char letter in dialogue[index].ToCharArray())
         {
             
@@ -70,6 +76,7 @@ public class NPC : MonoBehaviour
     }
     public void NextLine()
     {
+        
         nextButton.SetActive(false);
         if(index < dialogue.Length - 1)
         {
