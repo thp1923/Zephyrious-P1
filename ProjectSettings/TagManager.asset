@@ -12,6 +12,7 @@ TagManager:
   - Portal
   - Shake
   - NPC
+  - Portal2
   layers:
   - Default
   - TransparentFX

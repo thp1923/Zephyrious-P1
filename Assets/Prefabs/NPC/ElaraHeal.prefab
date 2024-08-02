@@ -388,7 +388,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.43333334, y: 1.1555556}
+    oldSize: {x: 0.39, y: 1.04}
     newSize: {x: 1, y: 1.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   timeNext: 0.7
   nextButton: {fileID: 2079718421453483744}
   learnButton: {fileID: 8187078386497673213}
-  wordSpeed: 0.003
+  wordSpeed: 0.0002
   playerIsClose: 0
   isLearn: 1
 --- !u!114 &9165469725958697258

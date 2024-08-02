@@ -989,7 +989,7 @@ MonoBehaviour:
   timeNext: 0.7
   nextButton: {fileID: 2862224473996007807}
   learnButton: {fileID: 3003720328218797021}
-  wordSpeed: 0.003
+  wordSpeed: 0.0002
   playerIsClose: 0
   isLearn: 1
 --- !u!114 &5250335824490265567

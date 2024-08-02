@@ -26,7 +26,8 @@ public class Bandit : MonoBehaviour
     AudioManager audioManager;
     public float attackRange = 2f;
     public LayerMask attackMask;
-    
+    public BoxCollider2D box;
+    public bool isDeath = false;
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -56,10 +57,12 @@ public class Bandit : MonoBehaviour
     }
     void Die()
     {
+        isDeath = true;
         FindObjectOfType<GameSession>().AddScore(pointAdd);
         banditAim.SetBool("Death", true);
+        Destroy(box);
         GetComponent<Collider2D>().enabled = false;
-        
+        rb.gravityScale = 0;
         rb.drag = 10;
         this.enabled = false;
 

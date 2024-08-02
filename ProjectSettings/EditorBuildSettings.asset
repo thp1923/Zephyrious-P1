@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Official/Mainmenu.unity
+    path: Assets/Scenes/Official/MainMenu.unity
     guid: 4c0576d653d2c3c48a2c77c7008e0997
   - enabled: 1
     path: Assets/Scenes/Official/OpeningCutScene.unity
@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Official/Map1.unity
     guid: d22e3357026c0c647a9d472d87f414d7
+  - enabled: 1
+    path: Assets/Scenes/Official/BossRoom.unity
+    guid: fd6df5124b89f754ab7db77a1ea40f50
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 04a4526fa61994b4f9b41578daf77dc8, type: 2}

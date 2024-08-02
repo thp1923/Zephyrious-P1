@@ -605,6 +605,7 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 417204835321658970}
 --- !u!1 &7607830287697697079
 GameObject:
   m_ObjectHideFlags: 0
