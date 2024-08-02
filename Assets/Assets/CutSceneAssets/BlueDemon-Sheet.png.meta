@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: 6ef5c1385b79576468d98e9da841e6af
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 183
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22db8b84ffde26428b4d3b0b5e59ee9
+      internalID: 1318504482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 183
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3373277d0a60774419ae685439f60ee0
+      internalID: 2003401473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 183
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cef3fe45d9ff1649861141c16a2c5b2
+      internalID: 2058377608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 183
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bc5719b836e9b4685ca64e14650c6a
+      internalID: 1408808538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 183
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab92153498a0d61479b1b98b7df45615
+      internalID: -923630497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 183
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fb1254147f9a540853c72188bbd238
+      internalID: -324063299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 183
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcf05ad3750bfd41ac66bca161a5a58
+      internalID: -564691170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 183
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9fa9fb3ff90134dae7f1d6261663bb
+      internalID: -648311329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 122
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f46ac0ffc8bbec43835de7db482e74a
+      internalID: -1503770176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 122
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06ded9a8ee68947b90cd05fee6aa49
+      internalID: 787808881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 122
+        width: 79
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbe4691b64e9c544a36541f4a37cc06
+      internalID: 563689858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 122
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0595a8c1c7dd04da3c7c2d82faf4a6
+      internalID: -1685572426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 122
+        width: 81
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb024fd569696fe42b3b40b12e2489d1
+      internalID: -1753249959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 122
+        width: 108
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018a03cee5da5814d8ffebde0dbf433f
+      internalID: 204744751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 122
+        width: 113
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92166227b542d4e41843e2d010b0b612
+      internalID: 611515658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 123
+        width: 100
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631c5be85cbcbd748912412c2c1ce262
+      internalID: 1120180665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 61
+        width: 97
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1942dca3bc5ce7f4c8da801b9297cd15
+      internalID: -1624877757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 60
+        width: 99
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c174ee3511f3f44b7aaa1ff69bc41e
+      internalID: -95536129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 61
+        width: 104
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1deaeeeb0bd59f438d3c0fa12efb931
+      internalID: 242077187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 61
+        width: 108
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8a69d503ab48343a6d87c72e190474
+      internalID: -780665936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 61
+        width: 111
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4feaf4ddda99514d910734722173246
+      internalID: 531719997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 61
+        width: 87
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b545dc407a7cefc44885d93f1cbb2fb5
+      internalID: -1218615315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 61
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af64a7d0d339cb4886eb7d0b133ec6c
+      internalID: 604191072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 62
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478ad7613c3428341a77ede18ba886e2
+      internalID: -337177686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e65e47b060e244abb8946ad1d51263
+      internalID: -601012491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4003ff0784747549a2fd355098c1ff3
+      internalID: 2010150045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 66
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbe7dd44eddc73429ada5086825ac55
+      internalID: 690025848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueDemon-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ac1e1c21b63ba43a6b469fe22727af
+      internalID: 1490735949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BlueDemon-Sheet_0: 1318504482
+      BlueDemon-Sheet_1: 2003401473
+      BlueDemon-Sheet_10: 563689858
+      BlueDemon-Sheet_11: -1685572426
+      BlueDemon-Sheet_12: -1753249959
+      BlueDemon-Sheet_13: 204744751
+      BlueDemon-Sheet_14: 611515658
+      BlueDemon-Sheet_15: 2062906566
+      BlueDemon-Sheet_16: 1120180665
+      BlueDemon-Sheet_17: 1139870448
+      BlueDemon-Sheet_18: -1488165305
+      BlueDemon-Sheet_19: -1516530933
+      BlueDemon-Sheet_2: 2058377608
+      BlueDemon-Sheet_20: -1624877757
+      BlueDemon-Sheet_21: 2083576787
+      BlueDemon-Sheet_22: 1922609365
+      BlueDemon-Sheet_23: -95536129
+      BlueDemon-Sheet_24: 1524410092
+      BlueDemon-Sheet_25: -1780583819
+      BlueDemon-Sheet_26: 242077187
+      BlueDemon-Sheet_27: -1221358175
+      BlueDemon-Sheet_28: -780665936
+      BlueDemon-Sheet_29: 531719997
+      BlueDemon-Sheet_3: 1408808538
+      BlueDemon-Sheet_30: -1218615315
+      BlueDemon-Sheet_31: 604191072
+      BlueDemon-Sheet_32: -337177686
+      BlueDemon-Sheet_33: 642101316
+      BlueDemon-Sheet_34: 1887444920
+      BlueDemon-Sheet_35: -751976806
+      BlueDemon-Sheet_36: -1638961987
+      BlueDemon-Sheet_37: -601012491
+      BlueDemon-Sheet_38: 2010150045
+      BlueDemon-Sheet_39: 690025848
+      BlueDemon-Sheet_4: -923630497
+      BlueDemon-Sheet_40: 1490735949
+      BlueDemon-Sheet_5: -324063299
+      BlueDemon-Sheet_6: -564691170
+      BlueDemon-Sheet_7: -648311329
+      BlueDemon-Sheet_8: -1503770176
+      BlueDemon-Sheet_9: 787808881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
