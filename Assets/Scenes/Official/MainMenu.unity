@@ -1094,6 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba7ff82919a81240a05de4e1ca77160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scenename: 
 --- !u!1 &500700118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,6 +4622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba7ff82919a81240a05de4e1ca77160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scenename: OpeningCutscene
 --- !u!1 &2070926372
 GameObject:
   m_ObjectHideFlags: 0
