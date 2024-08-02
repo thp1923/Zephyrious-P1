@@ -10,6 +10,8 @@ public class Bandit : MonoBehaviour
     public int maxHeath = 100;
     int currentHeath;
     public int DamgeEnemy = 10;
+    public float knockBack = 5f;
+    public float knockBackUp = 1f;
     Transform player;
     public Transform attackPoint;
     public bool isFlip = false;
@@ -24,6 +26,7 @@ public class Bandit : MonoBehaviour
     AudioManager audioManager;
     public float attackRange = 2f;
     public LayerMask attackMask;
+    
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -56,7 +59,8 @@ public class Bandit : MonoBehaviour
         FindObjectOfType<GameSession>().AddScore(pointAdd);
         banditAim.SetBool("Death", true);
         GetComponent<Collider2D>().enabled = false;
-        rb.gravityScale = 0;
+        
+        rb.drag = 10;
         this.enabled = false;
 
     }
@@ -94,6 +98,7 @@ public class Bandit : MonoBehaviour
         //Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
+        
     }
     void Run()
     {
@@ -113,18 +118,21 @@ public class Bandit : MonoBehaviour
     }
     public void Attack()
     {
-        Collider2D colInfo = Physics2D.OverlapCircle(attackPoint.position, attackRange, attackMask);
-        if (colInfo != null)
+        Collider2D[] colInfo = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackMask);
+        foreach(Collider2D col in colInfo)
         {
             FindObjectOfType<PlayerTakeDamge>().FlipTakeDamge(isFlip);
-            colInfo.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy);
+            col.GetComponent<PlayerTakeDamge>().takeDamge(DamgeEnemy, knockBack, knockBackUp);
+            
         }
     }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         
     }
+    
     public void Flip()
     {
         Vector3 flipped = transform.localScale;
@@ -135,12 +143,14 @@ public class Bandit : MonoBehaviour
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = false;
+            liveSlider.direction = Slider.Direction.LeftToRight;
         }
         else if (transform.position.x < player.position.x && !isFlip)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlip = true;
+            liveSlider.direction = Slider.Direction.RightToLeft;
         }
     }
 }

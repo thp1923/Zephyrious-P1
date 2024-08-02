@@ -59,6 +59,7 @@ public class UntilAttack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            
             GameObject impact = Instantiate(Impact, impactPoint.position, impactPoint.rotation);
             Destroy(gameObject);
         }

@@ -7,8 +7,7 @@ public class PlayerTakeDamge : MonoBehaviour
     public GameObject Shield;
     public float timeShield = 5f;
     public float timeShieldCoolDown = 10f;
-    public float knockBack = 2f;
-    public float knockBackUp = 2f;
+    
     public BoxCollider2D death;
     public Animator aim;
     public int DefMax = 500;
@@ -22,6 +21,8 @@ public class PlayerTakeDamge : MonoBehaviour
     float nextTime;
     bool haveShield = false;
     Rigidbody2D rb;
+
+    AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,10 @@ public class PlayerTakeDamge : MonoBehaviour
         death.gameObject.SetActive(false);
         Def = DefMax;
     }
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -57,7 +61,7 @@ public class PlayerTakeDamge : MonoBehaviour
             Def += DefRegen;
             nextDefRegenTime = Time.time + DefRegenTime;
         }
-        if (Def <= 0)
+        if (Def < 0)
         {
             Def = 0;
             nextDefRegenTime = Time.time + DefRegenTime;
@@ -68,16 +72,16 @@ public class PlayerTakeDamge : MonoBehaviour
     }
     
 
-    public void takeDamge(int damgeEnemy)
+    public void takeDamge(int damgeEnemy, float knockBack, float knockBackUp)
     {
         if(haveShield == true)
         {
             Def -= damgeEnemy;
-            
+            audioManager.PlaySFX(audioManager.TakeDamgeShield);
         }
         else if (haveShield == false)
         {
-            
+            audioManager.PlaySFX(audioManager.TakeDamge);
             rb.AddForce(transform.up * knockBackUp, ForceMode2D.Impulse);
             aim.SetTrigger("Hit");
             if (transform.localScale.x < 0)
@@ -95,6 +99,7 @@ public class PlayerTakeDamge : MonoBehaviour
         }
         if (FindObjectOfType<GameSession>().playerlives <= 0)
         {
+            audioManager.PlaySFX(audioManager.GameOver);
             Die();
         }
     }
@@ -139,8 +144,4 @@ public class PlayerTakeDamge : MonoBehaviour
         Shield.SetActive(false);
     }
 
-    public void UpDef(int up)
-    {
-        DefMax += up;
-    }
 }

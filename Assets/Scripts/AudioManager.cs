@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
@@ -19,6 +19,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip PlayerRun;
     public AudioClip EnemyHit;
     public AudioClip EnemyExplosion;
+    public AudioClip Flash;
+    public AudioClip TakeDamge;
+    public AudioClip TakeDamgeShield;
+    [Header("-------- Audio Clip Speak -------------")]
+    public AudioClip[] speak;
+    private int index;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +34,15 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+    
+    public void PlaySFXNPC(AudioClip[] clip)
+    {
+        if (index >= 0 && index < clip.Length)
+        {
+            SFXSource.PlayOneShot(clip[index]);
+            index++;
+            Debug.Log("Có chạy " + index);
+        }
     }
 }

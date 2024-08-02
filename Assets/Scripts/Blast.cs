@@ -8,6 +8,8 @@ public class Blast : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamge = 20;
+    public float knockBack = 5f;
+    public float knockBackUp = 1f;
     AudioManager audioManager;
     // Start is called before the first frame update
     private void Awake()
@@ -32,8 +34,13 @@ public class Blast : MonoBehaviour
 
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<PlayerTakeDamge>().takeDamge(attackDamge);
+            player.GetComponent<PlayerTakeDamge>().takeDamge(attackDamge, knockBack, knockBackUp);
 
         }
+    }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, AttackRange);
+
     }
 }

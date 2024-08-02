@@ -15,12 +15,14 @@ public class PlayerKnight : MonoBehaviour
     Animator aim;
     public BoxCollider2D feet;
     public bool isAttack = false;
+    public bool isTele = false;
     public int staminaMax = 100;
     public int recugeraceStamina = 30;
     public float recugeraceStaminaTime = 10f;
     public int stamina;
     float nextrecugeraceStaminaTime;
     AudioManager audioManager;
+    public GameObject Speak;
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -60,6 +62,10 @@ public class PlayerKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.F))
+        {
+            Speak.SetActive(false);
+        }
         staminaMax = FindObjectOfType<GameSession>().currentManaBuff;
         if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K))
         {
@@ -75,7 +81,7 @@ public class PlayerKnight : MonoBehaviour
         }
         Run();
         Flip();
-        if(stamina >= staminaMax)
+        if (stamina >= staminaMax)
         {
             stamina = staminaMax;
             nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
@@ -86,8 +92,14 @@ public class PlayerKnight : MonoBehaviour
             nextrecugeraceStaminaTime = Time.time + recugeraceStaminaTime;
         }
     }
+    
+    
     void Run()
     {
+        if (isTele == true)
+        {
+            return;
+        }
         rig.velocity = new Vector2(moveInput.x * speed, rig.velocity.y);
 
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
@@ -104,7 +116,22 @@ public class PlayerKnight : MonoBehaviour
             aim.SetBool("Jump", true);
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            Speak.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            Speak.SetActive(false);
+        }
+    }
     void Flip()
     {
         bool havemove = Mathf.Abs(rig.velocity.x) > Mathf.Epsilon;
