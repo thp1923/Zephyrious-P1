@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5995187332954830716}
   - component: {fileID: 914647569929251084}
   - component: {fileID: 2796498284888613293}
-  - component: {fileID: 2461383773363067904}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Portal
@@ -75,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1201679399
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayer: 1
+  m_SortingOrder: 10000
   m_Sprite: {fileID: -1111647230, guid: 7efc8980ca229d24e8f9d95635c8959e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,19 +143,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8403282, y: 1.875}
   m_Direction: 0
---- !u!114 &2461383773363067904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22359450789715402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58be0b7a71642bc44a2a13cb5cf9de8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diemDichChuyenDen: {fileID: 1498244647311137876}
 --- !u!1 &7234195976154044609
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 7234195976154044609}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.18, y: -0.28, z: 0}
+  m_LocalPosition: {x: -83.3, y: 186.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

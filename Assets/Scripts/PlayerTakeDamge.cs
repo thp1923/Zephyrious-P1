@@ -35,6 +35,7 @@ public class PlayerTakeDamge : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        Def = DefMax;
     }
     // Update is called once per frame
     void Update()

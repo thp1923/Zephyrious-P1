@@ -291,6 +291,7 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 1306981001969276915}
 --- !u!114 &8503110006232907782
 MonoBehaviour:
   m_ObjectHideFlags: 0

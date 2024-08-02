@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip Flash;
     public AudioClip TakeDamge;
     public AudioClip TakeDamgeShield;
+    public AudioClip Next;
+    public AudioClip Heal;
     [Header("-------- Audio Clip Speak -------------")]
     public AudioClip[] speak;
     private int index;
