@@ -1397,7 +1397,7 @@ MonoBehaviour:
   playerlivesMax: 400
   playerlives: 400
   score: 0
-  scoreCost: 375
+  scoreCost: 200
   scoreText: {fileID: 3460156444046028695}
   scoreText2: {fileID: 3663151820121556350}
   Errors: {fileID: 6773000524330070007}
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   DefPoint: 1
   HpPoint: 1
   StaminaPoint: 1
-  UpPower: 10
+  UpPower: 15
   UpDef: 10
   UpHp: 20
   UpMana: 15
