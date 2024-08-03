@@ -311,9 +311,9 @@ GameObject:
   m_Component:
   - component: {fileID: 233168862409382625}
   - component: {fileID: 4167242560534311852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3772800474926650660}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -695,3 +695,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   box: {fileID: 4167242560534311852}
+  isDeath: 0

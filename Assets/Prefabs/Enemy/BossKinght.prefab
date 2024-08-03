@@ -99,9 +99,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3772587321350749056}
   - component: {fileID: 5208014546438533563}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Box2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 783271098130835527}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -282,9 +282,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1391750630604866133}
   - component: {fileID: 6334079609617691449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +313,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4564746994632368647}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -596,6 +596,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   box: {fileID: 5208014546438533563}
+  isDeath: 0
 --- !u!1 &6816985692520661856
 GameObject:
   m_ObjectHideFlags: 0
