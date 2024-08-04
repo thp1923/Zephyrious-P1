@@ -299,4 +299,12 @@ public class GameSession : MonoBehaviour
     {
         UI.SetActive(true);
     }
+    public void FalseSkill()
+    {
+        skillAttack.SetActive(false);
+    }
+    public void FalseUntil()
+    {
+        untilAttack.SetActive(false);
+    }
 }

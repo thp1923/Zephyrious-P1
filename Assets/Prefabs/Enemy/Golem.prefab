@@ -215,6 +215,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   box: {fileID: 4756780651441309473}
+  isDeath: 0
 --- !u!1 &1423554431888287798
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +558,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6733966336550912798}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

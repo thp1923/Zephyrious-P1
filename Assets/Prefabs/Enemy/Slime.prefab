@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2990801856113975939}
   - component: {fileID: 2087079828071343145}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 60228571406620868}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -286,12 +286,13 @@ MonoBehaviour:
   isBoss: 0
   isDestroy: 1
   liveSlider: {fileID: 2080158666938012319}
-  pointAdd: 100
+  pointAdd: 50
   attackRange: 0.66
   attackMask:
     serializedVersion: 2
     m_Bits: 128
   box: {fileID: 2087079828071343145}
+  isDeath: 0
 --- !u!1 &4253259746933803693
 GameObject:
   m_ObjectHideFlags: 0
