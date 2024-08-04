@@ -112,9 +112,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1647833461801812504}
   - component: {fileID: 5213072136688575111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 799694755101877990}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -166,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07087898, y: -0.36486888}
+  m_Offset: {x: -0.07087898, y: -0.033641696}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2658043, y: 0.27026224}
+  m_Size: {x: 0.2658043, y: 0.9327166}
   m_EdgeRadius: 0
 --- !u!1 &1470665303626272313
 GameObject:
@@ -512,7 +512,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 4
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   banditAim: {fileID: 1220294553957340447}
-  maxHeath: 100
-  DamgeEnemy: 50
+  maxHeath: 150
+  DamgeEnemy: 100
   knockBack: 2
   knockBackUp: 0.5
   attackPoint: {fileID: 4308850579978233461}
@@ -574,6 +574,8 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 5213072136688575111}
+  isDeath: 0
 --- !u!1 &6700879050683455159
 GameObject:
   m_ObjectHideFlags: 0

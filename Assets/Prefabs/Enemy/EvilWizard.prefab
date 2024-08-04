@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 878570118240212249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.425, z: 0}
+  m_LocalPosition: {x: -0.911, y: -1.425, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -311,9 +311,9 @@ GameObject:
   m_Component:
   - component: {fileID: 233168862409382625}
   - component: {fileID: 4167242560534311852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,7 @@ Transform:
   m_GameObject: {fileID: 3772800474926650660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: -0.918, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,7 +342,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3772800474926650660}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -365,7 +365,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.48671424}
+  m_Offset: {x: -0.010597229, y: -0.124729335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -376,7 +376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.026571512}
+  m_Size: {x: 2.5895233, y: 0.7505413}
   m_EdgeRadius: 0
 --- !u!1 &6253349130590801914
 GameObject:
@@ -414,7 +414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.05, y: 0.92}
+  m_AnchoredPosition: {x: -0.926, y: 1.146}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2945346164960776517
@@ -437,7 +437,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1406101885
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2058145226274973984
@@ -559,7 +559,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1406101885
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1133904398, guid: 46b2673b7dfdf91408bf363825fb8307, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -625,18 +625,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044808865, y: -0.41224372}
+  m_Offset: {x: -0.91597176, y: -0.41224372}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3333334, y: 2.8333333}
+    oldSize: {x: 3.2916667, y: 2.8333333}
     newSize: {x: 1, y: 2.125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9210892, y: 2.0088456}
+  m_Size: {x: 1.1330299, y: 2.0088456}
   m_EdgeRadius: 0
 --- !u!50 &444694163295649143
 Rigidbody2D:
@@ -650,10 +650,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 4
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -679,18 +679,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   banditAim: {fileID: 7850974701441073081}
   maxHeath: 500
-  DamgeEnemy: 10
-  knockBack: 0.8
-  knockBackUp: 0.2
+  DamgeEnemy: 20
+  knockBack: 0.2
+  knockBackUp: 0
   attackPoint: {fileID: 8288334598693999756}
   isFlip: 0
   here: {fileID: 6673665789553911942}
   distance: 10
   isBoss: 0
-  isDestroy: 0
+  isDestroy: 1
   liveSlider: {fileID: 4849379109551194987}
-  pointAdd: 250
-  attackRange: 0.88
+  pointAdd: 500
+  attackRange: 1.33
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 4167242560534311852}
+  isDeath: 0

@@ -26,6 +26,7 @@ public class PlayerKnight : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        stamina = staminaMax;
     }
     // Start is called before the first frame update
     void Start()

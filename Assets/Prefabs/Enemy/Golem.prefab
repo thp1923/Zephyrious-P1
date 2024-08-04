@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1406101885
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -341799126, guid: b9a1732bbc861c643960bcc4ce7c755a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,9 +171,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 4
-  m_AngularDrag: 4
-  m_GravityScale: 4
+  m_LinearDrag: 10
+  m_AngularDrag: 10
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -198,22 +198,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   banditAim: {fileID: 8064252212790130165}
-  maxHeath: 4000
-  DamgeEnemy: 300
-  knockBack: 8
+  maxHeath: 1400
+  DamgeEnemy: 230
+  knockBack: 4
   knockBackUp: 1.5
   attackPoint: {fileID: 8126753523570974941}
   isFlip: 0
   here: {fileID: 9092401528939108015}
   distance: 10
   isBoss: 1
-  isDestroy: 0
+  isDestroy: 1
   liveSlider: {fileID: 6604946188885294930}
   pointAdd: 2000
   attackRange: 0.95
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 4756780651441309473}
+  isDeath: 0
 --- !u!1 &1423554431888287798
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +558,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6733966336550912798}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -651,7 +653,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1406101885
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5939266164048001909

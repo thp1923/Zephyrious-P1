@@ -156,7 +156,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1406101885
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1479928225, guid: c213e542f2a5fa243b36b4b54c567d70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 4
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   banditAim: {fileID: 8439647393768253982}
   maxHeath: 1000
-  DamgeEnemy: 100
+  DamgeEnemy: 150
   knockBack: 5
   knockBackUp: 1
   attackPoint: {fileID: 8592131553953303025}
@@ -291,6 +291,8 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 128
+  box: {fileID: 1306981001969276915}
+  isDeath: 0
 --- !u!114 &8503110006232907782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +372,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1406101885
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &4908803466348206660
@@ -543,9 +545,9 @@ GameObject:
   m_Component:
   - component: {fileID: 737647378631806053}
   - component: {fileID: 1306981001969276915}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,7 +576,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4703142494634286834}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c6236c1f36fec7544a10e0fad1976d90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -597,7 +599,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19948196, y: -0.48671424}
+  m_Offset: {x: -0.19948196, y: 0.1494934}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -608,7 +610,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5626373, y: 0.026571512}
+  m_Size: {x: 1.5626373, y: 1.2989868}
   m_EdgeRadius: 0
 --- !u!1 &5688406288584244383
 GameObject:
