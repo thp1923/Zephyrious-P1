@@ -1239,8 +1239,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1250647158}
     - target: {fileID: 8708889235583468577, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: maxHeath
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708889235583468577, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
       propertyPath: pointAdd
-      value: 10000
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708889235583468577, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: DamgeEnemy
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
