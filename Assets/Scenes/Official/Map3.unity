@@ -481,7 +481,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1238,6 +1238,10 @@ PrefabInstance:
       propertyPath: NPC
       value: 
       objectReference: {fileID: 1250647158}
+    - target: {fileID: 8708889235583468577, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: pointAdd
+      value: 10000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

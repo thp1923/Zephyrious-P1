@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
+    public bool haveSkill;
+    public bool haveUntil;
+
     public int playerlivesMax = 1000;
     public int playerlives;
     public int score = 0;
@@ -286,10 +289,12 @@ public class GameSession : MonoBehaviour
     public void UISkill()
     {
         skillAttack.SetActive(true);
+        haveSkill = true;
     }
     public void UIUntil()
     {
         untilAttack.SetActive(true);
+        haveUntil = true;
     }
     public void Heal()
     {
