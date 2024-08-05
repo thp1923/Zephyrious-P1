@@ -1394,8 +1394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4694c2a8753224c9e9e9cbe44e28d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerlivesMax: 400
-  playerlives: 400
+  playerlivesMax: 500
+  playerlives: 500
   score: 0
   scoreCost: 200
   scoreText: {fileID: 3460156444046028695}
@@ -1439,6 +1439,7 @@ MonoBehaviour:
   gameOver: {fileID: 67484194249767400}
   UI: {fileID: 8382107315440003962}
   stats: {fileID: 7836559019241433305}
+  TimeHeal: 0.2
 --- !u!1 &1963228797859272153
 GameObject:
   m_ObjectHideFlags: 0
