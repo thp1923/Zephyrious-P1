@@ -8870,7 +8870,7 @@ PrefabInstance:
     - target: {fileID: 6074053213800893729, guid: 50dec2befa0e9ab4a99fb02260259bf4, type: 3}
       propertyPath: Background
       value: 
-      objectReference: {fileID: 8300000, guid: c439c0a60966f8e4688374a446b119f6, type: 3}
+      objectReference: {fileID: 8300000, guid: 44b1a96047032ef4082278d16d3fe84c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
