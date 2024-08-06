@@ -1006,11 +1006,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Nh\xF3m : ZEPHYRIOUS\n\nTr\u01B0\u1EDFng nh\xF3m: \n\nTr\u1EA7n Ho\xE0ng
     Ph\xFAc\n\nTh\xE0nh vi\xEAn:\n\nNguy\u1EC5n V\xF5 Minh Qu\xE2n\n\nNguy\u1EC5n
-    V\u0103n \u0110\u1ED7 H\u1EA3i\n\nNguy\u1EC5n Qu\u1ED1c Kh\xE1nh\n\nNg\u01B0\u1EDDi
+    V\u0103n \u0110\u1ED7 H\u1EA3i\n\nNguy\u1EC5n L\xEA Qu\u1ED1c Kh\xE1nh\n\nNg\u01B0\u1EDDi
     l\xE0m Map:\n\nNguy\u1EC5n V\u0103n \u0110\u1ED7 H\u1EA3i\n\nNg\u01B0\u1EDDi
     l\xE0m ch\u1EE9c n\u0103ng:\n\nNguy\u1EC5n V\xF5 Minh Qu\xE2n\n\nTr\u1EA7n Ho\xE0ng
-    Ph\xFAc\n\nNg\u01B0\u1EDDi l\xEAn \xFD t\u01B0\u1EDFng:\n\nNguy\u1EC5n Qu\u1ED1c
-    Kh\xE1nh\n\nNh\u1EA1c:\n\nMajula\n\nLorian\n\nLinked Horizon\n\n"
+    Ph\xFAc\n\nNg\u01B0\u1EDDi l\xEAn \xFD t\u01B0\u1EDFng:\n\nNguy\u1EC5n L\xEA
+    Qu\u1ED1c Kh\xE1nh\n\nNh\u1EA1c:\n\nMajula\n\nLorian\n\nLinked Horizon\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 65951
+    rgba: 4278256031
   m_fontColor: {r: 0.6226415, g: 0.0029369951, b: 0.0029369951, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
