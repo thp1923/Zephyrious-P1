@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Official/BossRoom.unity
     guid: fd6df5124b89f754ab7db77a1ea40f50
+  - enabled: 1
+    path: Assets/Scenes/Official/After.unity
+    guid: 88fb5c1a734fab646a1724aeb76bc1a2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 04a4526fa61994b4f9b41578daf77dc8, type: 2}

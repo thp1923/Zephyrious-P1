@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
+    public bool haveSkill;
+    public bool haveUntil;
+
     public int playerlivesMax = 1000;
     public int playerlives;
     public int score = 0;
@@ -58,6 +61,9 @@ public class GameSession : MonoBehaviour
     public GameObject gameOver;
     public GameObject UI;
     public GameObject stats;
+
+    public float TimeHeal = 1f;
+    float nextHeal;
     private void Start()
     {
         currentPowerBuff = FindObjectOfType<PlayerCombat>().attackDamge;
@@ -107,6 +113,7 @@ public class GameSession : MonoBehaviour
         CD3.text = Cd3.ToString("F1");
 
         CD();
+        AutoHeal();
 
         staminaSlider.maxValue = FindObjectOfType<PlayerKnight>().staminaMax;
         DefSlider.maxValue = FindObjectOfType<PlayerTakeDamge>().DefMax;
@@ -282,10 +289,12 @@ public class GameSession : MonoBehaviour
     public void UISkill()
     {
         skillAttack.SetActive(true);
+        haveSkill = true;
     }
     public void UIUntil()
     {
         untilAttack.SetActive(true);
+        haveUntil = true;
     }
     public void Heal()
     {
@@ -307,4 +316,17 @@ public class GameSession : MonoBehaviour
     {
         untilAttack.SetActive(false);
     }
+    public void AutoHeal()
+    {
+        if(playerlives < playerlivesMax && FindObjectOfType<PlayerTakeDamge>().isAlive == true && Time.time >= nextHeal)
+        {
+            playerlives++;
+            nextHeal = Time.time + TimeHeal;
+        }
+        if (playerlives >= playerlivesMax)
+        {
+            playerlives = playerlivesMax;
+        }
+    }
+    
 }

@@ -769,10 +769,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
-  m_LinearDrag: 0.2
-  m_AngularDrag: 0.2
-  m_GravityScale: 5
+  m_Mass: 0.5
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d97f9a9a84b9b740996bc32a33ea507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RateTime: 0.8
+  RateTime: 0.6
   aim: {fileID: 4038291161526676091}
   attackPoint: {fileID: 3139211350200214019}
   AttackRange: 0.56
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 9161997846262657792, guid: 74ad7a43bafe2ae4baa8a91dbec41ef4, type: 3}
   FirePoint: {fileID: 4656259561619000846}
-  speed: 60
+  speed: 50
   TimeRate: 3
   aim: {fileID: 4038291161526676091}
   staminaCost: 150
@@ -1107,7 +1107,7 @@ Transform:
   m_GameObject: {fileID: 3210797818808923043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 0.16, z: 0}
+  m_LocalPosition: {x: -0.156, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1188,7 +1188,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1099225889
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 32767
   m_Sprite: {fileID: 1227171723, guid: 349bb17c50e832f489dbd65e67e9e505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
   m_FlipX: 0
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8320564436158458614}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3
+    OrthographicSize: 4
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
