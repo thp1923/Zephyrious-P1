@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Official/BossRoom.unity
     guid: fd6df5124b89f754ab7db77a1ea40f50
   - enabled: 1
+    path: Assets/Scenes/Official/EndingCutscene.unity
+    guid: 11dd2dfc1ec81ca49b15a050bb590863
+  - enabled: 1
     path: Assets/Scenes/Official/After.unity
     guid: 88fb5c1a734fab646a1724aeb76bc1a2
   m_configObjects:
