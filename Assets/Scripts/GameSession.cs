@@ -61,6 +61,7 @@ public class GameSession : MonoBehaviour
     public GameObject gameOver;
     public GameObject UI;
     public GameObject stats;
+    public GameObject full;
 
     public float TimeHeal = 1f;
     float nextHeal;
@@ -125,6 +126,12 @@ public class GameSession : MonoBehaviour
 
         scoreText2.text = score.ToString();
         scoreText.text = score.ToString();
+
+        if(Input.GetKeyDown(KeyCode.F12) && Time.time >= nextHeal)
+        {
+            full.SetActive(true);
+            nextHeal = Time.time + 100;
+        }
     }
 
     public void CD()
@@ -328,5 +335,15 @@ public class GameSession : MonoBehaviour
             playerlives = playerlivesMax;
         }
     }
-    
+    public void Cheat()
+    {
+        currentDefBuff += 100000000;
+        playerlivesMax += 100000000;
+        currentManaBuff += 100000000;
+        playerlives = playerlivesMax;
+        currentPowerBuff = FindObjectOfType<PlayerCombat>().attackDamge + 100000000;
+        damgeSkill = currentPowerBuff * BuffSkill;
+        damgeUntil = currentPowerBuff * BuffUntil;
+        damgeImpact = currentPowerBuff / BuffImpack;
+    }
 }
