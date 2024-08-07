@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475072882057889037, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: DamgeEnemy
-      value: 400
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 7972591231583874239, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8503110006232907782, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: attackDamge
-      value: 600
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7229,7 +7229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109765352942566227, guid: 53a3ebc60c1332c4eb2ec99ea0391dac, type: 3}
       propertyPath: DamgeEnemy
-      value: 600
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 7960075221924500199, guid: 53a3ebc60c1332c4eb2ec99ea0391dac, type: 3}
       propertyPath: m_Name
@@ -7459,8 +7459,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8741099115869333981, guid: 54947213bf6cb2a4292c40555cfd1e1f, type: 3}
+      propertyPath: maxHeath
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741099115869333981, guid: 54947213bf6cb2a4292c40555cfd1e1f, type: 3}
       propertyPath: pointAdd
-      value: 500000
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741099115869333981, guid: 54947213bf6cb2a4292c40555cfd1e1f, type: 3}
+      propertyPath: DamgeEnemy
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

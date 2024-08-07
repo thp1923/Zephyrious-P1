@@ -122,13 +122,13 @@ public class PlayerTakeDamge : MonoBehaviour
         if(flip == true)
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
-            Debug.Log("Trai");
+            
             
         }
         else if (flip == false)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
-            Debug.Log("Phai");
+            
         }
     }
     void OnShield()
