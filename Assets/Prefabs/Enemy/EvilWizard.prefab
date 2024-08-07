@@ -650,10 +650,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 10
-  m_AngularDrag: 10
-  m_GravityScale: 15
+  m_Mass: 10
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -689,7 +689,7 @@ MonoBehaviour:
   isBoss: 0
   isDestroy: 1
   liveSlider: {fileID: 4849379109551194987}
-  pointAdd: 500
+  pointAdd: 600
   attackRange: 1.33
   attackMask:
     serializedVersion: 2

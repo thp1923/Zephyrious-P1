@@ -1034,6 +1034,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4822013594119847020, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822013594119847020, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822013594119847020, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4822013594119847020, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5024986586426160044, guid: b32dd4997fd9c474f8731376bc6f66e4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
