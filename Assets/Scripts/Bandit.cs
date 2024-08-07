@@ -28,6 +28,8 @@ public class Bandit : MonoBehaviour
     public LayerMask attackMask;
     public BoxCollider2D box;
     public bool isDeath = false;
+    public bool haveGround;
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -101,7 +103,16 @@ public class Bandit : MonoBehaviour
         //Dodge();
         Debug.DrawRay(here.transform.position, Vector2.right * distance, Color.green);
         Debug.DrawRay(here.transform.position, Vector2.left * distance, Color.green);
-        
+        if (!box.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            haveGround = false;
+        }
+        else
+        {
+            haveGround = true;
+        }
+
+
     }
     void Run()
     {
@@ -110,7 +121,7 @@ public class Bandit : MonoBehaviour
             banditAim.SetBool("IsRunning", false);
             return;
         }
-        if (Vector2.Distance(player.position, here.position) < distance)
+        if (Vector2.Distance(player.position, here.position) < distance && haveGround == true)
         {
             banditAim.SetBool("IsRunning", true);
         }

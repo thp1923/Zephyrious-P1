@@ -202,10 +202,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 10
-  m_GravityScale: 4
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -293,6 +293,7 @@ MonoBehaviour:
     m_Bits: 128
   box: {fileID: 2087079828071343145}
   isDeath: 0
+  haveGround: 0
 --- !u!1 &4253259746933803693
 GameObject:
   m_ObjectHideFlags: 0
