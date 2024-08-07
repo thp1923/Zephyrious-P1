@@ -217,11 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475072882057889037, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: maxHeath
-      value: 10000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 7475072882057889037, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: pointAdd
-      value: 10000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 7475072882057889037, guid: f378debe6797c864a95951a42f3508f4, type: 3}
       propertyPath: DamgeEnemy
@@ -7221,11 +7221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109765352942566227, guid: 53a3ebc60c1332c4eb2ec99ea0391dac, type: 3}
       propertyPath: maxHeath
-      value: 10000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 4109765352942566227, guid: 53a3ebc60c1332c4eb2ec99ea0391dac, type: 3}
       propertyPath: pointAdd
-      value: 10000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 4109765352942566227, guid: 53a3ebc60c1332c4eb2ec99ea0391dac, type: 3}
       propertyPath: DamgeEnemy
