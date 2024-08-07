@@ -286,7 +286,7 @@ MonoBehaviour:
   isBoss: 0
   isDestroy: 1
   liveSlider: {fileID: 2080158666938012319}
-  pointAdd: 1500
+  pointAdd: 150
   attackRange: 0.66
   attackMask:
     serializedVersion: 2
