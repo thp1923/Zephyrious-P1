@@ -7468,7 +7468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8741099115869333981, guid: 54947213bf6cb2a4292c40555cfd1e1f, type: 3}
       propertyPath: DamgeEnemy
-      value: 3000
+      value: 30000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
