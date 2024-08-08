@@ -927,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 9161997846262657792, guid: 74ad7a43bafe2ae4baa8a91dbec41ef4, type: 3}
   FirePoint: {fileID: 4656259561619000846}
-  speed: 50
+  speed: 40
   TimeRate: 3
   aim: {fileID: 4038291161526676091}
   staminaCost: 150
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 1964087966111136499, guid: 2a5ba60e66da4804e80206a99564dbd7, type: 3}
   FirePoint: {fileID: 4656259561619000846}
-  speed: 50
+  speed: 40
   TimeRate: 10
   aim: {fileID: 4038291161526676091}
   staminaCost: 300

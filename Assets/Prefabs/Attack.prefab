@@ -165,7 +165,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamgeSkill1: 0
-  liveTime: 0.15
+  liveTime: 0.5
 --- !u!95 &402897124048534497
 Animator:
   serializedVersion: 5

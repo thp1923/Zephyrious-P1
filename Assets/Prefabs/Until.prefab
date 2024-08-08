@@ -135,7 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamgeSkill2: 0
-  liveTime: 0.5
+  liveTime: 0.7
   impactPoint: {fileID: 6053410500813236320}
   Impact: {fileID: 8332546452552477272, guid: 8e7cd0beafc2c4c4cb01a3c6a2edaa88, type: 3}
 --- !u!95 &3644329344593368271
